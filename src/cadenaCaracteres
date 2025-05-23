@@ -1,1 +1,7 @@
+#incluide <stdio.h>
+#incluide <string.h>
+#incluide <ctype.h>
 
+int contarVocalesCris(char fraseCris[]) {
+   int contadorCris = 0;
+   for 
