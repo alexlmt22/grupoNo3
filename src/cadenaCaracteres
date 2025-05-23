@@ -4,4 +4,19 @@
 
 int contarVocalesCris(char fraseCris[]) {
    int contadorCris = 0;
-   for 
+   for (int i = 0; fraseCris[i] != '\0' ; i++) {
+      char letraCris = tolower(fraseCris[i]);
+      if (letraCris == 'a' || letraCris == 'e' || letraCris == 'i' || letraCris == 'o' || letraCris =0 'u') {
+contadorCris++; 
+    }
+ }
+ return contador Cris;
+}
+int main() {
+    char fraseCris[] = "hamburguesa"; 
+    printf("Frase: %s\n", fraseCris);
+
+    int totalVocalesCris = contarVocalesCris(fraseCris);
+    printf("Tiene %d vocales\n", totalVocalesCris);
+    return 0;
+}
