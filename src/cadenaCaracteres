@@ -8,9 +8,9 @@ int contarVocalesCris(char fraseCris[]) {
       char letraCris = tolower(fraseCris[i]);
       if (letraCris == 'a' || letraCris == 'e' || letraCris == 'i' || letraCris == 'o' || letraCris =0 'u') {
 contadorCris++; 
-    }
- }
- return contador Cris;
+     }
+  }
+  return contador Cris;
 }
 int main() {
     char fraseCris[] = "hamburguesa"; 
