@@ -1,4 +1,4 @@
-#incluide <stdio.h>
+#incluir <stdio.h>
 #incluide <string.h>
 #incluide <ctype.h>
 
