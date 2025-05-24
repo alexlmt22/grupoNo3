@@ -26,10 +26,6 @@ Frase: hamburguesa
 Tiene 5 vocales
 
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
 int contarVocalesJC(char fraseJC[]) {
     int contadorJC = 0;
     int iJC = 0;
@@ -57,10 +53,6 @@ int main() {
 Frase: hamburguesa
 Tiene 5 vocales
 
-
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 
 int contarVocalesJC(char fraseJC[]) {
     int contadorJC = 0;
@@ -115,9 +107,6 @@ Frase: hamburguesa
 Tiene 11 letras
 
 
-#include <stdio.h>
-#include <string.h>
-
 int contarLetrasJC_dowhile(char fraseJC[]) {
     int contadorJC = 0;
     int iJC = 0;
@@ -136,9 +125,6 @@ int totalLetrasJC = contarLetrasJC_dowhile(fraseJC);
 Frase: hamburguesa
 Tiene 11 letras
 
-
-#include <stdio.h>
-#include <string.h>
 
 int contarLetrasJC_while(char fraseJC[]) {
     int contadorJC = 0;
@@ -172,10 +158,6 @@ void eliminarVocalesJC_for(char palabraJC[]) {
 }
 
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
 void eliminarVocalesJC_dowhile(char palabraJC[]) {
     int iJC = 0;
     printf("Sin vocales (do-while): ");
@@ -191,10 +173,6 @@ void eliminarVocalesJC_dowhile(char palabraJC[]) {
     printf("\n");
 }
 
-
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 
 void eliminarVocalesJC_while(char palabraJC[]) {
     int iJC = 0;
