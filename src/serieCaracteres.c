@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 #include "../lib/tool.h"
 
 void llSerieS1CFor(int llCantidad)
@@ -36,6 +37,235 @@ void llSerieS1CDoWhile(int llCantidad)
     printf("---------------------------------");
 }
 
+void serie2cFor(int nroSigno)
+{
+    char signo = '+';
+    int a = 0, b = 1, c;
+ 
+    printf("\nSerie 2 de Caracteres For:\n");
+    for (int i = 1; i <= nroSigno; i++)
+ {
+    c = a + b;
+    a = b;
+    b = c;
+
+    for (int j = 1; j <= a; j++)
+        printf("%c ", signo );
+
+    printf("\t");
+ }
+    printf("\n");
+}
+
+void serie2cWhile(int nroSigno)
+{
+    char signo = '+';
+    int a = 0, b = 1, c;
+    int i = 1;
+ 
+    printf("\nSerie 2 de Caracteres While:\n");
+    while(i <= nroSigno)
+ {
+    c = a + b;
+    a = b;
+    b = c;
+
+    for (int j = 1; j <= a; j++)
+        printf("%c ", signo );
+
+    printf("\t");
+    i++;
+ }
+    printf("\n");
+}
+
+void serie2cDoWhile(int nroSigno)
+{
+    char signo = '+';
+    int a = 0, b = 1, c;
+    int i = 1;
+ 
+    printf("\nSerie 2 de Caracteres DoWhile:\n");
+    do
+    {
+        c = a + b;
+        a = b;
+        b = c;
+
+        for (int j = 1; j <= a; j++)
+        printf("%c ", signo );
+
+        printf("\t");
+        i++;
+    } 
+        while (i <= nroSigno);
+        printf("\n");
+} 
+
+bool esPrimo(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i * i <= n; i++) 
+    {
+        if (n % i == 0) return false;
+    }
+    return true;
+}
+
+void serie3cFor(int nroTerminos)
+{
+    char signo = '+';
+    int contador = 0;
+    int num = 2;
+
+    printf("\nSerie 3 de Caracteres con numeros primos For:\n");
+
+    for (; contador < nroTerminos; num++) 
+    {
+        if (esPrimo(num)) 
+        {
+            for (int j = 1; j <= num; j++)
+                printf("%c ", signo);
+            printf("\t");
+            contador++;
+        }
+     }
+        printf("\n");
+}   
+
+void serie3cWhile(int nroTerminos)
+{
+    char signo = '+';
+    int contador = 0;
+    int num = 2;
+
+    printf("\nSerie 3 de Caracteres con numeros primos While:\n");
+
+    while (contador < nroTerminos) 
+    {
+        if (esPrimo(num)) 
+        {
+            int j = 1;
+            while (j <= num) 
+            {
+                printf("%c ", signo);
+                j++;
+            }
+                printf("\t");
+                contador++;
+        }
+            num++;
+    }
+        printf("\n");
+}
+
+void serie3cDoWhile(int nroTerminos)
+{
+    char signo = '+';
+    int contador = 0;
+    int num = 2;
+
+    printf("\nSerie 3 de Caracteres con numeros primos DoWhile:\n");
+
+    do {
+        if (esPrimo(num)) 
+        {
+            int j = 1;
+            do 
+            {
+                printf("%c ", signo);
+                j++;
+            } 
+            while (j <= num);
+            printf("\t");
+            contador++;
+        }
+            num++;
+    } 
+        while (contador < nroTerminos);
+        printf("\n");
+}
+
+void serie4cFor(int nroTerminos)
+{
+    char simbolos[] = {'+', '-', '*', '/'};
+
+    printf("\nSerie 4 de Caracteres For:\n");
+    for (int i = 0; i < nroTerminos; i++) 
+    {
+        printf("%c ", simbolos[i % 4]);
+    }
+        printf("\n");
+}
+
+void serie4cWhile(int nroTerminos)
+{
+    char simbolos[] = {'+', '-', '*', '/'};
+
+    printf("\nSerie 4 de Caracteres While:\n");
+    int i = 0;
+    while (i < nroTerminos) 
+    {
+        printf("%c ", simbolos[i % 4]);
+        i++;
+    }
+        printf("\n");
+}
+
+void serie4DoWhile(int nroTerminos)
+{
+    char simbolos[] = {'+', '-', '*', '/'};
+
+    printf("\nSerie 4 de Caracteres DoWhile:\n");
+    int i = 0;
+    do 
+    {
+        printf("%c ", simbolos[i % 4]);
+        i++;
+    } 
+        while (i < nroTerminos);
+        printf("\n");
+}
+
+void serie5cFor(int nroTerminos)
+{
+    char simbolos[] = {'\\', '|', '/', '-'};
+
+    printf("\nSerie 5 de Caracteres For:\n");
+    for (int i = 0; i < nroTerminos; i++)
+    {
+        printf("%c ", simbolos[i % 4]);
+    }
+        printf("\n");
+}
+
+void serie5cWhile(int nroTerminos)
+{
+    char simbolos[] = {'\\', '|', '/', '-'};
+
+    printf("\nSerie 5 de Caracteres While:\n");
+    int i = 0;
+    while (i < nroTerminos)
+    {
+        printf("%c ", simbolos[i % 4]);
+        i++; 
+    }
+        printf("\n");
+}
+
+void serie5cDoWhile(int nroTerminos)
+{
+    char simbolos[] = {'\\', '|', '/', '-'};
+
+    printf("\nSerie 5 de Caracteres DoWhile:\n");
+    int i = 0;
+    do
+    {
+        printf("%c ", simbolos[i % 4]);
+        i++;
+    } 
+        while (i < nroTerminos);
+        printf("\n");
+}
 
 void llSerieS6CFor(int llCantidad)
 {
