@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../lib/tool.h"
 
 void llSerieS1CFor(int llCantidad)
 {
@@ -250,20 +251,20 @@ void llSerieS10CFor(int llCantidad)
     
     for (int i = 0; i < llCantidad; i++) 
     {
-        char letra = 'a' + i;
-        int repeticiones;
+        char llLetra = 'a' + i;
+        int llrepeticiones;
         
         if (i < 3) {
-            repeticiones = 1;  // Para a, b, c
+            llrepeticiones = 1;
         } else {
-            repeticiones = llfib1 + llfib2; // Fib(n) = Fib(n-1) + Fib(n-2)
+            llrepeticiones = llfib1 + llfib2;
             llfib3 = llfib1 + llfib2;
             llfib1 = llfib2;
             llfib2 = llfib3;
         }
 
-        for (int j = 0; j < repeticiones; j++) {
-            printf("%c", letra);
+        for (int j = 0; j < llrepeticiones; j++) {
+            printf("%c", llLetra);
         }
         printf(" ");
     }
@@ -278,20 +279,20 @@ void llSerieS10CWhile(int llCantidad)
 
     while (i < llCantidad) 
     {
-        char letra = 'a' + i;
-        int repeticiones;
+        char llLetra = 'a' + i;
+        int llrepeticiones;
 
         if (i < 3) {
-            repeticiones = 1;  // Para a, b, c
+            llrepeticiones = 1;
         } else {
-            repeticiones = llfib1 + llfib2; // Fib(n) = Fib(n-1) + Fib(n-2)
+            llrepeticiones = llfib1 + llfib2;
             llfib3 = llfib1 + llfib2;
             llfib1 = llfib2;
             llfib2 = llfib3;
         }
 
-        for (int j = 0; j < repeticiones; j++) {
-            printf("%c", letra);
+        for (int j = 0; j < llrepeticiones; j++) {
+            printf("%c", llLetra);
         }
         printf(" ");
         i++;
@@ -307,20 +308,20 @@ void llSerieS10CDoWhile(int llCantidad)
 
     do 
     {
-        char letra = 'a' + i;
-        int repeticiones;
+        char llLetra = 'a' + i;
+        int llrepeticiones;
 
         if (i < 3) {
-            repeticiones = 1;  // Para a, b, c
+            llrepeticiones = 1;
         } else {
-            repeticiones = llfib1 + llfib2; // Fib(n) = Fib(n-1) + Fib(n-2)
+            llrepeticiones = llfib1 + llfib2;
             llfib3 = llfib1 + llfib2;
             llfib1 = llfib2;
             llfib2 = llfib3;
         }
 
-        for (int j = 0; j < repeticiones; j++) {
-            printf("%c", letra);
+        for (int j = 0; j < llrepeticiones; j++) {
+            printf("%c", llLetra);
         }
         printf(" ");
         i++;
