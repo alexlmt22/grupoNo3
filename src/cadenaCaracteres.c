@@ -224,3 +224,70 @@ Palabra original: hamburguesa
 Sin vocales (for): hmbrgs
 Sin vocales (while): hmbrgs
 Sin vocales (do-while): hmbrgs
+
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void eliminarLetraJC_for(char fraseJC[], char letraEliminarJC) {
+    printf("Frase sin '%c' (for): ", letraEliminarJC);
+    for (int iJC = 0; fraseJC[iJC] != '\0'; iJC++) {
+        if (tolower(fraseJC[iJC]) != tolower(letraEliminarJC)) {
+            printf("%c", fraseJC[iJC]);
+        }
+    }
+    printf("\n");
+}
+
+
+void eliminarLetraJC_dowhile(char fraseJC[], char letraEliminarJC) {
+    int iJC = 0;
+    printf("Frase sin '%c' (do-while): ", letraEliminarJC);
+
+    if (fraseJC[0] == '\0') return;
+
+    do {
+        if (tolower(fraseJC[iJC]) != tolower(letraEliminarJC)) {
+            printf("%c", fraseJC[iJC]);
+        }
+        iJC++;
+    } while (fraseJC[iJC] != '\0');
+
+    printf("\n");
+}
+
+
+void eliminarLetraJC_while(char fraseJC[], char letraEliminarJC) {
+    int iJC = 0;
+    printf("Frase sin '%c' (while): ", letraEliminarJC);
+    while (fraseJC[iJC] != '\0') {
+        if (tolower(fraseJC[iJC]) != tolower(letraEliminarJC)) {
+            printf("%c", fraseJC[iJC]);
+        }
+        iJC++;
+    }
+    printf("\n");
+}
+
+int main() {
+    char fraseJC[100];
+    char letraEliminarJC;
+
+    printf("Ingrese una frase: ");
+    fgets(fraseJC, sizeof(fraseJC), stdin);
+    fraseJC[strcspn(fraseJC, "\n")] = '\0'; // Eliminar salto de línea
+
+    printf("Ingrese la letra que desea eliminar: ");
+    scanf(" %c", &letraEliminarJC);
+
+    eliminarLetraJC_for(fraseJC, letraEliminarJC);
+    eliminarLetraJC_while(fraseJC, letraEliminarJC);
+    eliminarLetraJC_dowhile(fraseJC, letraEliminarJC);
+
+    return 0;
+}
+
+Frase sin 'u' (for): hambrgesa
+Frase sin 'u' (while): hambrgesa
+Frase sin 'u' (do-while): hambrgesa
