@@ -124,3 +124,4 @@ int contarLetrasJC_dowhile(char fraseJC[]) {
 
     return contadorJC;
 }
+int totalLetrasJC = contarLetrasJC_dowhile(fraseJC);
