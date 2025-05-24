@@ -37,13 +37,13 @@ void llSerieS1CDoWhile(int llCantidad)
     printf("---------------------------------");
 }
 
-void serie2cFor(int nroSigno)
+void liaserie2cFor(int lianroSigno)
 {
     char signo = '+';
     int a = 0, b = 1, c;
  
     printf("\nSerie 2 de Caracteres For:\n");
-    for (int i = 1; i <= nroSigno; i++)
+    for (int i = 1; i <= lianroSigno; i++)
  {
     c = a + b;
     a = b;
@@ -57,14 +57,14 @@ void serie2cFor(int nroSigno)
     printf("\n");
 }
 
-void serie2cWhile(int nroSigno)
+void liaserie2cWhile(int lianroSigno)
 {
     char signo = '+';
     int a = 0, b = 1, c;
     int i = 1;
  
     printf("\nSerie 2 de Caracteres While:\n");
-    while(i <= nroSigno)
+    while(i <= lianroSigno)
  {
     c = a + b;
     a = b;
@@ -79,7 +79,7 @@ void serie2cWhile(int nroSigno)
     printf("\n");
 }
 
-void serie2cDoWhile(int nroSigno)
+void liaserie2cDoWhile(int lianroSigno)
 {
     char signo = '+';
     int a = 0, b = 1, c;
@@ -98,20 +98,21 @@ void serie2cDoWhile(int nroSigno)
         printf("\t");
         i++;
     } 
-        while (i <= nroSigno);
+        while (i <= lianroSigno);
         printf("\n");
 } 
 
-bool esPrimo(int n) {
-    if (n < 2) return false;
-    for (int i = 2; i * i <= n; i++) 
+bool liaesPrimo(int lian) 
+{
+    if (lian < 2) return false;
+    for (int i = 2; i * i <= lian; i++) 
     {
-        if (n % i == 0) return false;
+        if (lian % i == 0) return false;
     }
     return true;
 }
 
-void serie3cFor(int nroTerminos)
+void liaserie3cFor(int lianroTerminos)
 {
     char signo = '+';
     int contador = 0;
@@ -119,9 +120,9 @@ void serie3cFor(int nroTerminos)
 
     printf("\nSerie 3 de Caracteres con numeros primos For:\n");
 
-    for (; contador < nroTerminos; num++) 
+    for (; contador < lianroTerminos; num++) 
     {
-        if (esPrimo(num)) 
+        if (liaesPrimo(num)) 
         {
             for (int j = 1; j <= num; j++)
                 printf("%c ", signo);
@@ -132,7 +133,7 @@ void serie3cFor(int nroTerminos)
         printf("\n");
 }   
 
-void serie3cWhile(int nroTerminos)
+void liaserie3cWhile(int lianroTerminos)
 {
     char signo = '+';
     int contador = 0;
@@ -140,9 +141,9 @@ void serie3cWhile(int nroTerminos)
 
     printf("\nSerie 3 de Caracteres con numeros primos While:\n");
 
-    while (contador < nroTerminos) 
+    while (contador < lianroTerminos) 
     {
-        if (esPrimo(num)) 
+        if (liaesPrimo(num)) 
         {
             int j = 1;
             while (j <= num) 
@@ -158,7 +159,7 @@ void serie3cWhile(int nroTerminos)
         printf("\n");
 }
 
-void serie3cDoWhile(int nroTerminos)
+void liaserie3cDoWhile(int lianroTerminos)
 {
     char signo = '+';
     int contador = 0;
@@ -167,7 +168,7 @@ void serie3cDoWhile(int nroTerminos)
     printf("\nSerie 3 de Caracteres con numeros primos DoWhile:\n");
 
     do {
-        if (esPrimo(num)) 
+        if (liaesPrimo(num)) 
         {
             int j = 1;
             do 
@@ -181,29 +182,29 @@ void serie3cDoWhile(int nroTerminos)
         }
             num++;
     } 
-        while (contador < nroTerminos);
+        while (contador < lianroTerminos);
         printf("\n");
 }
 
-void serie4cFor(int nroTerminos)
+void liaserie4cFor(int lianroTerminos)
 {
     char simbolos[] = {'+', '-', '*', '/'};
 
     printf("\nSerie 4 de Caracteres For:\n");
-    for (int i = 0; i < nroTerminos; i++) 
+    for (int i = 0; i < lianroTerminos; i++) 
     {
         printf("%c ", simbolos[i % 4]);
     }
         printf("\n");
 }
 
-void serie4cWhile(int nroTerminos)
+void liaserie4cWhile(int lianroTerminos)
 {
     char simbolos[] = {'+', '-', '*', '/'};
 
     printf("\nSerie 4 de Caracteres While:\n");
     int i = 0;
-    while (i < nroTerminos) 
+    while (i < lianroTerminos) 
     {
         printf("%c ", simbolos[i % 4]);
         i++;
@@ -211,7 +212,7 @@ void serie4cWhile(int nroTerminos)
         printf("\n");
 }
 
-void serie4DoWhile(int nroTerminos)
+void liaserie4DoWhile(int lianroTerminos)
 {
     char simbolos[] = {'+', '-', '*', '/'};
 
@@ -222,29 +223,29 @@ void serie4DoWhile(int nroTerminos)
         printf("%c ", simbolos[i % 4]);
         i++;
     } 
-        while (i < nroTerminos);
+        while (i < lianroTerminos);
         printf("\n");
 }
 
-void serie5cFor(int nroTerminos)
+void liaserie5cFor(int lianroTerminos)
 {
     char simbolos[] = {'\\', '|', '/', '-'};
 
     printf("\nSerie 5 de Caracteres For:\n");
-    for (int i = 0; i < nroTerminos; i++)
+    for (int i = 0; i < lianroTerminos; i++)
     {
         printf("%c ", simbolos[i % 4]);
     }
         printf("\n");
 }
 
-void serie5cWhile(int nroTerminos)
+void liaserie5cWhile(int lianroTerminos)
 {
     char simbolos[] = {'\\', '|', '/', '-'};
 
     printf("\nSerie 5 de Caracteres While:\n");
     int i = 0;
-    while (i < nroTerminos)
+    while (i < lianroTerminos)
     {
         printf("%c ", simbolos[i % 4]);
         i++; 
@@ -252,7 +253,7 @@ void serie5cWhile(int nroTerminos)
         printf("\n");
 }
 
-void serie5cDoWhile(int nroTerminos)
+void liaserie5cDoWhile(int lianroTerminos)
 {
     char simbolos[] = {'\\', '|', '/', '-'};
 
@@ -263,7 +264,7 @@ void serie5cDoWhile(int nroTerminos)
         printf("%c ", simbolos[i % 4]);
         i++;
     } 
-        while (i < nroTerminos);
+        while (i < lianroTerminos);
         printf("\n");
 }
 
