@@ -39,7 +39,7 @@ int leaValidarEntero(char *leaMensaje)
             return leaNumero;
             
         }
-        printf("Error de entrada\nVuelva a intentarlo\n");
+        printf("Error de entrada. El numero debe ser mayor o igual a cero\nVuelva a intentarlo\n");
     } 
 
 }

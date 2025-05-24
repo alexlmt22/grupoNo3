@@ -94,6 +94,7 @@ void llSerieS2DoWhile(int llnumero)
     } while (i <= llnumero);
 
     printf("\n");
+    printf("---------------------------------");
 }
 
 void llSerieS3For(int llnumero)
@@ -149,6 +150,7 @@ void llSerieS3DoWhile(int llnumero)
     } while (i <= llnumero);
 
     printf("\n");
+    printf("---------------------------------");
 }
 
 void llSerieS4For(int llnumero)
@@ -204,6 +206,7 @@ void llSerieS4DoWhile(int llnumero)
     } while (i <= llnumero);
 
     printf("\n");
+    printf("---------------------------------");
 }
 
 void llSerieS5For(int llnumero)
@@ -300,6 +303,7 @@ void llSerieS5DoWhile(int llnumero)
     } while (llcontPrimos < llnumero);
 
     printf("\n");
+    printf("---------------------------------");
 }
 
 void leaSerieS6For(int leaNroTermino)
