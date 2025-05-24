@@ -291,3 +291,77 @@ int main() {
 Frase sin 'u' (for): hambrgesa
 Frase sin 'u' (while): hambrgesa
 Frase sin 'u' (do-while): hambrgesa
+
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void invertirConVocalesMayusJC_for(char palabraJC[]) {
+    int longitudJC = strlen(palabraJC);
+    printf("Invertida con vocales mayúsculas (for): ");
+    for (int iJC = longitudJC - 1; iJC >= 0; iJC--) {
+        char letraJC = palabraJC[iJC];
+        char letraMinJC = tolower(letraJC);
+        if (letraMinJC == 'a' || letraMinJC == 'e' || letraMinJC == 'i' || letraMinJC == 'o' || letraMinJC == 'u') {
+            printf("%c", toupper(letraMinJC));
+        } else {
+            printf("%c", letraMinJC);
+        }
+    }
+    printf("\n");
+}
+
+
+void invertirConVocalesMayusJC_dowhile(char palabraJC[]) {
+    int iJC = strlen(palabraJC) - 1;
+    printf("Invertida con vocales mayúsculas (do-while): ");
+
+    if (iJC < 0) return;
+
+    do {
+        char letraJC = palabraJC[iJC];
+        char letraMinJC = tolower(letraJC);
+        if (letraMinJC == 'a' || letraMinJC == 'e' || letraMinJC == 'i' || letraMinJC == 'o' || letraMinJC == 'u') {
+            printf("%c", toupper(letraMinJC));
+        } else {
+            printf("%c", letraMinJC);
+        }
+        iJC--;
+    } while (iJC >= 0);
+
+    printf("\n");
+}
+
+
+void invertirConVocalesMayusJC_while(char palabraJC[]) {
+    int iJC = strlen(palabraJC) - 1;
+    printf("Invertida con vocales mayúsculas (while): ");
+    while (iJC >= 0) {
+        char letraJC = palabraJC[iJC];
+        char letraMinJC = tolower(letraJC);
+        if (letraMinJC == 'a' || letraMinJC == 'e' || letraMinJC == 'i' || letraMinJC == 'o' || letraMinJC == 'u') {
+            printf("%c", toupper(letraMinJC));
+        } else {
+            printf("%c", letraMinJC);
+        }
+        iJC--;
+    }
+    printf("\n");
+}
+
+int main() {
+    char palabraJC[] = "hamburguesa";
+    printf("Palabra original: %s\n", palabraJC);
+
+    invertirConVocalesMayusJC_for(palabraJC);
+    invertirConVocalesMayusJC_while(palabraJC);
+    invertirConVocalesMayusJC_dowhile(palabraJC);
+
+    return 0;
+}
+
+Palabra original: hamburguesa
+Invertida con vocales mayúsculas (for): AsEUgrUbmAh
+Invertida con vocales mayúsculas (while): AsEUgrUbmAh
+Invertida con vocales mayúsculas (do-while): AsEUgrUbmAh
