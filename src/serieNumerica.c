@@ -44,6 +44,7 @@ void leaSerieS1DoWhile(int leaNroTermino){
         leaInicial++;
     } while (leaInicial < leaNroTermino);
     printf("\n");
+    printf("---------------------------------");
 }
 
 void llSerieS2For(int llnumero)
@@ -301,6 +302,240 @@ void llSerieS5DoWhile(int llnumero)
     printf("\n");
 }
 
+void leaSerieS6For(int leaNroTermino)
+{
+    int leaTermino;
+    printf("\nSerie S6 For:\n");
+    for (int leaInicial = 1; leaInicial <= leaNroTermino; leaInicial++)
+    {
+        leaTermino = leaInicial*leaInicial;
+        printf("%d ",leaTermino);
+    }
+    printf("\n");
+}
+
+void leaSerieS6While(int leaNroTermino)
+{
+    int leaTermino, leaInicial = 1;
+    printf("\nSerie S6 While:\n");
+    while (leaInicial <= leaNroTermino)
+    {
+        leaTermino = leaInicial*leaInicial;
+        printf("%d ",leaTermino);
+        leaInicial++;
+    }
+    printf("\n");
+}
+
+void leaSerieS6Dowhile(int leaNroTermino)
+{
+    int leaTermino, leaInicial = 1;
+    printf("\nSerie S6 Do While:\n");
+    do
+    {
+        leaTermino = leaInicial*leaInicial;
+        printf("%d ",leaTermino);
+        leaInicial++;
+    } while (leaInicial <= leaNroTermino);
+    printf("\n");
+    printf("---------------------------------");
+}
+
+void leaSerieS7For(int leaNroTermino)
+{
+    int leaTerminoN,leaTermino=1,leaSecuencia=3;
+    printf("\nSerie S7 For:\n");
+    for (int leaInicial = 0; leaInicial < leaNroTermino; leaInicial++)
+    {
+        leaTerminoN = leaTermino + (leaInicial*leaSecuencia);
+        printf("%d ",leaTerminoN);
+    }
+    printf("\n");
+}
+
+void leaSerieS7While(int leaNroTermino)
+{
+    int leaTerminoN,leaTermino=1,leaSecuencia=3,leaInicial=0;
+    printf("\nSerie S7 While:\n");
+    while (leaInicial<leaNroTermino)
+    {
+        leaTerminoN = leaTermino + (leaInicial*leaSecuencia);
+        printf("%d ",leaTerminoN);
+        leaInicial++;
+    }
+    printf("\n");
+}
+
+void leaSerieS7Dowhile(int leaNroTermino)
+{
+    int leaTerminoN,leaTermino=1,leaSecuencia=3,leaInicial=0;
+    printf("\nSerie S7 Do While:\n");
+    do
+    {
+        leaTerminoN = leaTermino + (leaInicial*leaSecuencia);
+        printf("%d ",leaTerminoN);
+        leaInicial++;
+    } while (leaInicial<leaNroTermino);
+    printf("\n");
+    printf("---------------------------------");
+}
+
+void leaSerieS8For(int leaNroTermino)
+{
+    int leaTerminoN,leaTermino=3,leaSecuencia=5;
+    printf("\nSerie S8 For:\n");
+    for (int leaInicial = 0; leaInicial < leaNroTermino; leaInicial++)
+    {
+        leaTerminoN = leaTermino + (leaInicial*leaSecuencia);
+        printf("%d ",leaTerminoN);
+    }
+    printf("\n");
+    
+}
+
+void leaSerieS8While(int leaNroTermino)
+{
+    int leaTerminoN,leaTermino=3,leaSecuencia=5,leaInicial=0;
+    printf("\nSerie S8 While:\n");
+    while (leaInicial<leaNroTermino)
+    {
+        leaTerminoN = leaTermino + (leaInicial*leaSecuencia);
+        printf("%d ",leaTerminoN);
+        leaInicial++;
+    }
+    printf("\n");
+}
+
+void leaSerieS8DoWhile(int leaNroTermino)
+{
+    int leaTerminoN,leaTermino=3,leaSecuencia=5,leaInicial=0;
+    printf("\nSerie S8 Do While:\n");
+    do
+    {
+        leaTerminoN = leaTermino + (leaInicial*leaSecuencia);
+        printf("%d ",leaTerminoN);
+        leaInicial++;
+    } while (leaInicial<leaNroTermino);
+    printf("\n");
+    printf("---------------------------------");
+}
+
+void leaSerieS9For(int leaNroTermino)
+{
+    int leaTermino=2;
+    printf("\nSerie S9 For:\n");
+    for (int leaInicial = 0; leaInicial < leaNroTermino; leaInicial++)
+    {
+        printf("%d ",leaTermino);
+        leaTermino *=2;
+    }
+    printf("\n");
+}
+
+void leaSerieS9While(int leaNroTermino)
+{
+    int leaTermino=2,leaInicial=0;
+    printf("\nSerie S9 While:\n");
+    while (leaInicial < leaNroTermino)
+    {
+        printf("%d ",leaTermino);
+        leaTermino *=2;
+        leaInicial++;
+    }
+    printf("\n");
+}
+
+void leaSerieS9DoWhile(int leaNroTermino)
+{
+    int leaTermino=2,leaInicial=0;
+    printf("\nSerie S9 Do While:\n");
+    do
+    {
+        printf("%d ",leaTermino);
+        leaTermino *=2;
+        leaInicial++;
+    } while (leaInicial < leaNroTermino);
+    printf("\n");
+    printf("---------------------------------");
+}
+
+void leaSerieS10For(int leaNroTermino)
+{
+    int leaTermino=3;
+    printf("\nSerie S10 For:\n");
+    for (int leaInicial = 0; leaInicial < leaNroTermino; leaInicial++)
+    {
+        printf("%d ",leaTermino);
+        leaTermino *=3;
+    }
+    printf("\n");
+}
+
+void leaSerieS10While(int leaNroTermino)
+{
+    int leaTermino=3,leaInicial=0;
+    printf("\nSerie S10 While:\n");
+    while (leaInicial < leaNroTermino)
+    {
+        printf("%d ",leaTermino);
+        leaTermino *=3;
+        leaInicial++;
+    }
+    printf("\n");
+}
+
+void leaSerieS10DoWhile(int leaNroTermino)
+{
+    int leaTermino=3,leaInicial=0;
+    printf("\nSerie S10 Do While:\n");
+    do
+    {
+        printf("%d ",leaTermino);
+        leaTermino *=3;
+        leaInicial++;
+    } while (leaInicial < leaNroTermino);
+    printf("\n");
+    printf("---------------------------------");
+}
+
+void leaSerieS11For(int leaNroTermino)
+{
+    int leaTermino;
+    printf("\nSerie S11 For:\n");
+    for (int leaInicial = 1; leaInicial <= leaNroTermino; leaInicial++)
+    {
+        leaTermino = leaInicial * (leaInicial + 1);
+        printf("%d ",leaTermino);
+    }
+    printf("\n");
+}
+
+void leaSerieS11While(int leaNroTermino){
+    int leaTermino,leaInicial=1;
+    printf("\nSerie S11 While:\n");
+    while (leaInicial <= leaNroTermino)
+    {
+        leaTermino = leaInicial * (leaInicial + 1);
+        printf("%d ",leaTermino);
+        leaInicial++;
+    }
+    printf("\n");
+}
+
+void leaSerieS11DoWhile(int leaNroTermino)
+{
+    int leaTermino,leaInicial=1;
+    printf("\nSerie S11 Do While:\n");
+    do
+    {
+        leaTermino = leaInicial * (leaInicial + 1);
+        printf("%d ",leaTermino);
+        leaInicial++;
+    } while (leaInicial <= leaNroTermino);
+    printf("\n");
+    printf("---------------------------------");
+}
+
 void leaControladorSerie()
 {
     int leaNumero = 0;
@@ -320,5 +555,23 @@ void leaControladorSerie()
     llSerieS5For(leaNumero);
     llSerieS5While(leaNumero);
     llSerieS5DoWhile(leaNumero);
+    leaSerieS6For(leaNumero);
+    leaSerieS6While(leaNumero);
+    leaSerieS6Dowhile(leaNumero);
+    leaSerieS7For(leaNumero);
+    leaSerieS7While(leaNumero);
+    leaSerieS7Dowhile(leaNumero);
+    leaSerieS8For(leaNumero);
+    leaSerieS8While(leaNumero);
+    leaSerieS8DoWhile(leaNumero);
+    leaSerieS9For(leaNumero);
+    leaSerieS9While(leaNumero);
+    leaSerieS9DoWhile(leaNumero);
+    leaSerieS10For(leaNumero);
+    leaSerieS10While(leaNumero);
+    leaSerieS10DoWhile(leaNumero);
+    leaSerieS11For(leaNumero);
+    leaSerieS11While(leaNumero);
+    leaSerieS11DoWhile(leaNumero);
     printf("\n");
 }
