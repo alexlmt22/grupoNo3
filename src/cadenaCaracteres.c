@@ -509,3 +509,194 @@ Presentarla la palabra con mayusculas sin la letra s (while): PERLA
 Presentarla la palabra con mayusculas sin la letra s (do-while): PERLA
 
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+void JC_ordenar(char* palabra) {
+    int len = strlen(palabra);
+    for (int i = 0; i < len - 1; i++) {
+        for (int j = i + 1; j < len; j++) {
+            if (palabra[i] > palabra[j]) {
+                char temp = palabra[i];
+                palabra[i] = palabra[j];
+                palabra[j] = temp;
+            }
+        }
+    }
+}
+
+int JC_esAnagrama(char* p1, char* p2) {
+    char temp1[50], temp2[50];
+    strcpy(temp1, p1);
+    strcpy(temp2, p2);
+    JC_ordenar(temp1);
+    JC_ordenar(temp2);
+    return strcmp(temp1, temp2) == 0;
+}
+
+int main() {
+    char JC_palabra[] = "amor";
+    char JC_anagrama[] = "roma";
+    char JC_intento[50];
+    
+    printf("Adivina un anagrama de: %s\n", JC_palabra);
+
+    for (int JC_intentos = 0; JC_intentos < 3; JC_intentos++) {
+        printf("Intento %d: ", JC_intentos + 1);
+        scanf("%s", JC_intento);
+
+        if (JC_esAnagrama(JC_palabra, JC_intento) && strcmp(JC_intento, JC_anagrama) == 0) {
+            printf("¡Correcto, JC!\n");
+            return 0;
+        }
+    }
+
+    printf("Fallaste, JC. La respuesta era: %s\n", JC_anagrama);
+    return 0;
+}
+
+
+int main() {
+    char JC_palabra[] = "amor";
+    char JC_anagrama[] = "roma";
+    char JC_intento[50];
+    int JC_intentos = 0;
+
+    printf("Adivina un anagrama de: %s\n", JC_palabra);
+
+    while (JC_intentos < 3) {
+        printf("Intento %d: ", JC_intentos + 1);
+        scanf("%s", JC_intento);
+
+        if (JC_esAnagrama(JC_palabra, JC_intento) && strcmp(JC_intento, JC_anagrama) == 0) {
+            printf("¡Correcto, JC!\n");
+            return 0;
+        }
+
+        JC_intentos++;
+    }
+
+    printf("Fallaste, JC. La respuesta era: %s\n", JC_anagrama);
+    return 0;
+}
+
+
+int main() {
+    char JC_palabra[] = "amor";
+    char JC_anagrama[] = "roma";
+    char JC_intento[50];
+    int JC_intentos = 0;
+
+    printf("Adivina un anagrama de: %s\n", JC_palabra);
+
+    do {
+        printf("Intento %d: ", JC_intentos + 1);
+        scanf("%s", JC_intento);
+
+        if (JC_esAnagrama(JC_palabra, JC_intento) && strcmp(JC_intento, JC_anagrama) == 0) {
+            printf("¡Correcto, JC!\n");
+            return 0;
+        }
+
+        JC_intentos++;
+    } while (JC_intentos < 3);
+
+    printf("Fallaste, JC. La respuesta era: %s\n", JC_anagrama);
+    return 0;
+}
+
+Adivina un anagrama de: amor
+Intento 1: ramo
+Intento 2: mora
+Intento 3: roma
+¡Correcto, JC!
+
+Adivina un anagrama de: amor
+Intento 1: ramo
+Intento 2: mora
+Intento 3: armo
+Fallaste, JC. La respuesta era: roma
+
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main() {
+    char JC_frase[] = "programar es divertido";
+    char JC_resultado[100];
+    int JC_contador = 0;
+
+    for (int i = 0; JC_frase[i] != '\0'; i++) {
+        if (JC_frase[i] != ' ') {
+            JC_resultado[i] = (JC_contador % 2 == 0) ? toupper(JC_frase[i]) : tolower(JC_frase[i]);
+            JC_contador++;
+        } else {
+            JC_resultado[i] = ' ';
+        }
+    }
+
+    JC_resultado[strlen(JC_frase)] = '\0';
+
+    printf("FOR -> %s\n", JC_resultado);
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main() {
+    char JC_frase[] = "programar es divertido";
+    char JC_resultado[100];
+    int i = 0, JC_contador = 0;
+
+    while (JC_frase[i] != '\0') {
+        if (JC_frase[i] != ' ') {
+            JC_resultado[i] = (JC_contador % 2 == 0) ? toupper(JC_frase[i]) : tolower(JC_frase[i]);
+            JC_contador++;
+        } else {
+            JC_resultado[i] = ' ';
+        }
+        i++;
+    }
+
+    JC_resultado[i] = '\0';
+
+    printf("WHILE -> %s\n", JC_resultado);
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main() {
+    char JC_frase[] = "programar es divertido";
+    char JC_resultado[100];
+    int i = 0, JC_contador = 0;
+
+    do {
+        if (JC_frase[i] != '\0') {
+            if (JC_frase[i] != ' ') {
+                JC_resultado[i] = (JC_contador % 2 == 0) ? toupper(JC_frase[i]) : tolower(JC_frase[i]);
+                JC_contador++;
+            } else {
+                JC_resultado[i] = ' ';
+            }
+            i++;
+        }
+    } while (JC_frase[i] != '\0');
+
+    JC_resultado[i] = '\0';
+
+    printf("DO-WHILE -> %s\n", JC_resultado);
+    return 0;
+}
+
+FOR -> PrOgRaMaR Es DiVeRtIdO
+WHILE -> PrOgRaMaR Es DiVeRtIdO
+DO-WHILE -> PrOgRaMaR Es DiVeRtIdO
