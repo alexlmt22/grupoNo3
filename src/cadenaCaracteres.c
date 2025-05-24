@@ -3,23 +3,23 @@
 #include <ctype.h>
 
 // Función para contar vocales
-int contarVocalesCRIS(char fraseCRIS[]) {
-    int contadorCRIS = 0;
-    for (int i = 0; fraseCRIS[i] != '\0'; i++) {
-        char letraCRIS = tolower(fraseCRIS[i]);
-        if (letraCRIS == 'a' || letraCRIS == 'e' || letraCRIS == 'i' || letraCRIS == 'o' || letraCRIS == 'u') {
-            contadorCRIS++;
+int jccontarVocales(char frasejc[]) {
+    int contadorjc = 0;
+    for (int i = 0; frasejc[i] != '\0'; i++) {
+        char letrajc = tolower(frasejc[i]);
+        if (letrajc == 'a' || letrajc == 'e' || letrajc == 'i' || letrajc == 'o' || letrajc == 'u') {
+            contadorjc++;
         }
     }
-    return contadorCRIS;
+    return contadorjc;
 }
 
 int main() {
-    char fraseCRIS[] = "hamburguesa";  // Frase fija
-    printf("Frase: %s\n", fraseCRIS);
+    char frasejc[] = "hamburguesa";  // Frase fija
+    printf("Frase: %s\n", frasejc);
 
-    int totalVocalesCRIS = contarVocalesCRIS(fraseCRIS);
-    printf("Tiene %d vocales\n", totalVocalesCRIS);
+    int totalVocalesjc = jccontarVocales(frasejc);
+    printf("Tiene %d vocales\n", totalVocalesjc);
     return 0;
 }
 
