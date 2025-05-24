@@ -105,3 +105,22 @@ int main() {
     printf("Tiene %d letras\n", totalLetrasJC);
     return 0;
 }
+
+
+#include <stdio.h>
+#include <string.h>
+
+int contarLetrasJC_dowhile(char fraseJC[]) {
+    int contadorJC = 0;
+    int iJC = 0;
+    if (fraseJC[0] == '\0') return 0;
+
+    do {
+        if (fraseJC[iJC] != ' ') {
+            contadorJC++;
+        }
+        iJC++;
+    } while (fraseJC[iJC] != '\0');
+
+    return contadorJC;
+}
