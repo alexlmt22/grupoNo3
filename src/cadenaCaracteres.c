@@ -82,3 +82,26 @@ int main() {
     printf("Tiene %d vocales\n", totalVocalesJC);
     return 0;
 }
+
+
+#include <stdio.h>
+#include <string.h>
+
+int contarLetrasJC_for(char fraseJC[]) {
+    int contadorJC = 0;
+    for (int iJC = 0; fraseJC[iJC] != '\0'; iJC++) {
+        if (fraseJC[iJC] != ' ') {
+            contadorJC++;
+        }
+    }
+    return contadorJC;
+}
+
+int main() {
+    char fraseJC[] = "hamburguesa";
+    printf("Frase: %s\n", fraseJC);
+
+    int totalLetrasJC = contarLetrasJC_for(fraseJC);
+    printf("Tiene %d letras\n", totalLetrasJC);
+    return 0;
+}
