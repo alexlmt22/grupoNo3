@@ -53,3 +53,32 @@ int main() {
     return 0;
 }
 
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int contarVocalesJC(char fraseJC[]) {
+    int contadorJC = 0;
+    int iJC = 0;
+    char letraJC;
+
+    while (fraseJC[iJC] != '\0') {
+        letraJC = tolower(fraseJC[iJC]);
+        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
+            contadorJC++;
+        }
+        iJC++;
+    }
+
+    return contadorJC;
+}
+
+int main() {
+    char fraseJC[] = "hamburguesa";
+    printf("Frase: %s\n", fraseJC);
+
+    int totalVocalesJC = contarVocalesJC(fraseJC);
+    printf("Tiene %d vocales\n", totalVocalesJC);
+    return 0;
+}
