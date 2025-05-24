@@ -365,3 +365,147 @@ Palabra original: hamburguesa
 Invertida con vocales mayúsculas (for): AsEUgrUbmAh
 Invertida con vocales mayúsculas (while): AsEUgrUbmAh
 Invertida con vocales mayúsculas (do-while): AsEUgrUbmAh
+
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void invertirConsonantesMayusJC_for(char palabraJC[]) {
+    int longitudJC = strlen(palabraJC);
+    printf("FOR: ");
+    for (int iJC = longitudJC - 1; iJC >= 0; iJC--) {
+        char letraJC = tolower(palabraJC[iJC]);
+        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
+            printf("%c", letraJC);  // vocal en minúscula
+        } else {
+            printf("%c", toupper(letraJC));  // consonante en mayúscula
+        }
+    }
+    printf("\n");
+}
+
+
+void invertirConsonantesMayusJC_while(char palabraJC[]) {
+    int iJC = strlen(palabraJC) - 1;
+    printf("WHILE: ");
+    while (iJC >= 0) {
+        char letraJC = tolower(palabraJC[iJC]);
+        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
+            printf("%c", letraJC);
+        } else {
+            printf("%c", toupper(letraJC));
+        }
+        iJC--;
+    }
+    printf("\n");
+}
+
+
+void invertirConsonantesMayusJC_dowhile(char palabraJC[]) {
+    int iJC = strlen(palabraJC) - 1;
+    printf("DO-WHILE: ");
+    if (iJC < 0) return;
+
+    do {
+        char letraJC = tolower(palabraJC[iJC]);
+        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
+            printf("%c", letraJC);
+        } else {
+            printf("%c", toupper(letraJC));
+        }
+        iJC--;
+    } while (iJC >= 0);
+    printf("\n");
+}
+
+int main() {
+    char palabraJC[] = "hamburguesa";
+
+    printf("Palabra original: %s\n", palabraJC);
+
+    invertirConsonantesMayusJC_for(palabraJC);
+    invertirConsonantesMayusJC_while(palabraJC);
+    invertirConsonantesMayusJC_dowhile(palabraJC);
+
+    return 0;
+}
+
+Palabra original: hamburguesa
+Invertida con consonantes mayúsculas (for): aSeuGRuBMaH
+Invertida con consonantes mayúsculas (while): aSeuGRuBMaH
+Invertida con consonantes mayúsculas (do-while): aSeuGRuBMaH
+
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+
+void eliminarLetraS_JC_for(char fraseJC[]) {
+    printf("FOR: ");
+    for (int iJC = 0; fraseJC[iJC] != '\0'; iJC++) {
+        char letraJC = toupper(fraseJC[iJC]);
+        if (letraJC != 'S') {
+            printf("%c", letraJC);
+        }
+    }
+    printf("\n");
+}
+
+
+void eliminarLetraS_JC_while(char fraseJC[]) {
+    int iJC = 0;
+    printf("WHILE: ");
+    while (fraseJC[iJC] != '\0') {
+        char letraJC = toupper(fraseJC[iJC]);
+        if (letraJC != 'S') {
+            printf("%c", letraJC);
+        }
+        iJC++;
+    }
+    printf("\n");
+}
+
+
+void eliminarLetraS_JC_dowhile(char fraseJC[]) {
+    int iJC = 0;
+    printf("DO-WHILE: ");
+    if (fraseJC[0] == '\0') return;
+
+    do {
+        char letraJC = toupper(fraseJC[iJC]);
+        if (letraJC != 'S') {
+            printf("%c", letraJC);
+        }
+        iJC++;
+    } while (fraseJC[iJC] != '\0');
+    printf("\n");
+}
+
+
+int main() {
+    char fraseJC[100];
+
+    printf("Ingrese una frase: ");
+    fgets(fraseJC, sizeof(fraseJC), stdin);
+
+    // Eliminar salto de línea si lo hay
+    size_t lenJC = strlen(fraseJC);
+    if (lenJC > 0 && fraseJC[lenJC - 1] == '\n') {
+        fraseJC[lenJC - 1] = '\0';
+    }
+
+    eliminarLetraS_JC_for(fraseJC);
+    eliminarLetraS_JC_while(fraseJC);
+    eliminarLetraS_JC_dowhile(fraseJC);
+
+    return 0;
+}
+
+Palabra original: Perlas
+Presentarla la palabra con mayusculas sin la letra s (for): PERLA
+Presentarla la palabra con mayusculas sin la letra s (while): PERLA
+Presentarla la palabra con mayusculas sin la letra s (do-while): PERLA
+
+
