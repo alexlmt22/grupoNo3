@@ -125,3 +125,19 @@ int contarLetrasJC_dowhile(char fraseJC[]) {
     return contadorJC;
 }
 int totalLetrasJC = contarLetrasJC_dowhile(fraseJC);
+
+
+#include <stdio.h>
+#include <string.h>
+
+int contarLetrasJC_while(char fraseJC[]) {
+    int contadorJC = 0;
+    int iJC = 0;
+    while (fraseJC[iJC] != '\0') {
+        if (fraseJC[iJC] != ' ') {
+            contadorJC++;
+        }
+        iJC++;
+    }
+    return contadorJC;
+}
