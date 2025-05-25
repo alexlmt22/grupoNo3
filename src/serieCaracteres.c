@@ -560,3 +560,42 @@ void llSerieS10CDoWhile(int llCantidad)
     printf("\n");
     printf("---------------------------------");
 }
+
+void llControladorSerieCaracteres()
+{
+   int leaNumero = 0;
+   leaNumero = leaValidarEntero
+   llSerieS1CFor(leaNumero);
+   llSerieS1CWhile(leaNumero);
+   llSerieS1CDoWhile(leaNumero);
+   liaserie2cFor(leaNumero);
+   liaserie2cWhile(leaNumero);
+   liaserie2cDoWhile(leaNumero);
+   liaserie3cFor(leaNumero);
+   liaserie3cWhile(leaNumero);
+   liaserie3cDoWhile(leaNumero);
+   liaserie4cFor(leaNumero);
+   liaserie4cWhile(leaNumero);
+   liaserie4DoWhile(leaNumero);
+   liaserie5cFor(leaNumero);
+   liaserie5cWhile(leaNumero);
+   liaserie5cDoWhile(leaNumero);
+   llSerieS2CFor(leaNumero);
+   llSerieS2CWhile(leaNumero);
+   llSerieS2CDoWhile(leaNumero);
+   llSerieS6CFor(leaNumero);
+   llSerieS6CWhile(leaNumero);
+   llSerieS6CDoWhile(leaNumero);
+   llSerieS7CFor(leaNumero);
+   llSerieS7CWhile(leaNumero);
+   llSerieS7CDoWhile(leaNumero);
+   llSerieS8CFor(leaNumero);
+   llSerieS8CWhile(leaNumero);
+   llSerieS8CDoWhile(leaNumero);
+   llSerieS9CFor(leaNumero);
+   llSerieS9CWhile(leaNumero);
+   llSerieS9CDoWhile(leaNumero);
+   llSerieS10CFor(leaNumero);
+   llSerieS10CWhile(leaNumero);
+   llSerieS10CDoWhile(leaNumero);
+}

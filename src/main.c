@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "portada.c"
-#include "serieNumerica.c"
-
+#include "serieNumericaCaracter.c"
 
 int main()
 {
