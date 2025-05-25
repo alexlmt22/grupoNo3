@@ -1106,7 +1106,7 @@ void llSerieS10CDoWhile(int llCantidad)
 void leaControladorSerie()
 {
     int leaNumero = 0;
-    leaNumero = leaValidarEntero("\nIngrese el numero de elementos de la serie numerica:");
+    leaNumero = leaValidarEntero("\nIngrese el numero de terminos de las series:");
     leaSerieS1For(leaNumero);
     leaSerieS1While(leaNumero);
     leaSerieS1DoWhile(leaNumero);
