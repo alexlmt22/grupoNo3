@@ -4,12 +4,14 @@
 #include "windows.h"
 
 #include "serieNumericaCaracter.c"
+#include "array.c"
 #include "recursion.c"
 
 int main()
 {
     leaVerPortada();
     leaControladorSerie();
+    llControladorArray();
     
     cargaRotativaForIM();
     cargaRotativawhileIM();
