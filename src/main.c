@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "portada.c"
-#include "serieNumerica.c"
 #include "Loading.c"
 #include "windows.h"
 
+#include "serieNumericaCaracter.c"
+#include "recursion.c"
 
 int main()
 {
@@ -47,5 +48,6 @@ int main()
    cargaFigurasWhileIM();
    cargaFigurasDoWhileIM();
 
+    leaControladorRecursion();
     return 0;
 }
