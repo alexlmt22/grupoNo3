@@ -109,7 +109,7 @@ int leaValidarNumero(char *leaMensaje)
         leaValido = true;
 
         int leaInicio = 0;
-        if (leaIngreso[0]== '-')
+        if (leaIngreso[0] == '-')
         {
             leaInicio = 1;
             if(leaIngreso[1] == '\0')
@@ -118,7 +118,7 @@ int leaValidarNumero(char *leaMensaje)
             }
         }
 
-        for (int i = 0; leaIngreso[i] != '\0'; i++)
+        for (int i = leaInicio; leaIngreso[i] != '\0'; i++)
         {
             if (!isdigit(leaIngreso[i]))
             {
