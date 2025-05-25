@@ -3,197 +3,190 @@
 #include <ctype.h>
 
 // Función para contar vocales
-int contarVocalesJC(char fraseJC[]) {
-    int contadorJC = 0;
-    for (int i = 0; fraseJC[i] != '\0'; i++) {
-        char letraJC = tolower(fraseJC[i]);
-        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
-            contadorJC++;
+int JCcontarVocales(char JCfrase[]) {
+    int JCcontador = 0;
+    for (int i = 0; JCfrase[i] != '\0'; i++) {
+        char JCletra = tolower(JCfrase[i]);
+        if (JCletra == 'a' || JCletra == 'e' || JCletra == 'i' || JCletra == 'o' || JCletra == 'u') {
+            JCcontador++;
         }
     }
-    return contadorJC;
+    return JCcontador;
 }
 
 int main() {
-    char fraseJC[] = "hamburguesa";  // Frase fija
-    printf("Frase: %s\n", fraseJC);
+    char JCfrase[] = "hamburguesa";  // Frase fija
+    printf("Frase: %s\n", JCfrase);
 
-    int totalVocalesJC = JCcontarVocales(fraseJC);
-    printf("Tiene %d vocales\n", totalVocalesJC);
+    int JCtotalVocales = JCcontarVocales(JCfrase);
+    printf("Tiene %d vocales\n", JCtotalVocales);
     return 0;
 }
 Frase: hamburguesa
 Tiene 5 vocales
 
 
-int contarVocalesJC(char fraseJC[]) {
-    int contadorJC = 0;
-    int iJC = 0;
-    char letraJC;
+int JCcontarVocales(char JCfrase[]) {
+    int JCcontador = 0;
+    int JCi = 0;
+    char JCletra;
 
     do {
-        letraJC = tolower(fraseJC[iJC]);
-        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
-            contadorJC++;
+        JCletra = tolower(JCfrase[JCi]);
+        if (JCletra == 'a' || JCletra == 'e' || JCletra == 'i' || JCletra == 'o' || JCletra == 'u') {
+            JCcontador++;
         }
-        iJC++;
-    } while (fraseJC[iJC] != '\0');
+        JCi++;
+    } while (JCfrase[JCi] != '\0');
 
-    return contadorJC;
+    return JCcontador;
 }
 
 int main() {
-    char fraseJC[] = "hamburguesa";
-    printf("Frase: %s\n", fraseJC);
+    char JCfrase[] = "hamburguesa";
+    printf("Frase: %s\n", JCfrase);
 
-    int totalVocalesJC = contarVocalesJC(fraseJC);
-    printf("Tiene %d vocales\n", totalVocalesJC);
+    int JCtotalVocales = JCcontarVocales(JCfrase);
+    printf("Tiene %d vocales\n", JCtotalVocales);
     return 0;
 }
 Frase: hamburguesa
 Tiene 5 vocales
 
 
-int contarVocalesJC(char fraseJC[]) {
-    int contadorJC = 0;
-    int iJC = 0;
-    char letraJC;
+int JCcontarVocales(char JCfrase[]) {
+    int JCcontador = 0;
+    int JCi = 0;
+    char JCletra;
 
-    while (fraseJC[iJC] != '\0') {
-        letraJC = tolower(fraseJC[iJC]);
-        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
-            contadorJC++;
+    while (JCfrase[JCi] != '\0') {
+        JCletra = tolower(JCfrase[JCi]);
+        if (JCletra == 'a' || JCletra == 'e' || JCletra == 'i' || JCletra == 'o' || JCletra == 'u') {
+            JCcontador++;
         }
-        iJC++;
+        JCi++;
     }
 
-    return contadorJC;
+    return JCcontador;
 }
 
 int main() {
-    char fraseJC[] = "hamburguesa";
-    printf("Frase: %s\n", fraseJC);
+    char JCfrase[] = "hamburguesa";
+    printf("Frase: %s\n", JCfrase);
 
-    int totalVocalesJC = contarVocalesJC(fraseJC);
-    printf("Tiene %d vocales\n", totalVocalesJC);
+    int JCtotalVocales = JCcontarVocales(JCfrase);
+    printf("Tiene %d vocales\n", JCtotalVocales);
     return 0;
 }
 Frase: hamburguesa
 Tiene 5 vocales
 
 
-#include <stdio.h>
-#include <string.h>
-
-int contarLetrasJC_for(char fraseJC[]) {
-    int contadorJC = 0;
-    for (int iJC = 0; fraseJC[iJC] != '\0'; iJC++) {
-        if (fraseJC[iJC] != ' ') {
-            contadorJC++;
+int JCcontarLetras_for(char JCfrase[]) {
+    int JCcontador = 0;
+    for (int JCi = 0; JCfrase[JCi] != '\0'; JCi++) {
+        if (JCfrase[JCi] != ' ') {
+            JCcontador++;
         }
     }
-    return contadorJC;
+    return JCcontador;
 }
 
 int main() {
-    char fraseJC[] = "hamburguesa";
-    printf("Frase: %s\n", fraseJC);
+    char JCfrase[] = "hamburguesa";
+    printf("Frase: %s\n", JCfrase);
 
-    int totalLetrasJC = contarLetrasJC_for(fraseJC);
-    printf("Tiene %d letras\n", totalLetrasJC);
+    int JCtotalLetras = JCcontarLetras_for(JCfrase);
+    printf("Tiene %d letras\n", JCtotalLetras);
     return 0;
 }
 Frase: hamburguesa
 Tiene 11 letras
 
 
-int contarLetrasJC_dowhile(char fraseJC[]) {
-    int contadorJC = 0;
-    int iJC = 0;
-    if (fraseJC[0] == '\0') return 0;
+int JCcontarLetras_dowhile(char JCfrase[]) {
+    int JCcontador = 0;
+    int JCi = 0;
+    if (JCfrase[0] == '\0') return 0;
 
     do {
-        if (fraseJC[iJC] != ' ') {
-            contadorJC++;
+        if (JCfrase[JCi] != ' ') {
+            JCcontador++;
         }
-        iJC++;
-    } while (fraseJC[iJC] != '\0');
+        JCi++;
+    } while (JCfraseJC[JCi] != '\0');
 
-    return contadorJC;
+    return JCcontador;
 }
-int totalLetrasJC = contarLetrasJC_dowhile(fraseJC);
+int JCtotalLetras = JCcontarLetras_dowhile(JCfrase);
 Frase: hamburguesa
 Tiene 11 letras
 
 
-int contarLetrasJC_while(char fraseJC[]) {
-    int contadorJC = 0;
-    int iJC = 0;
-    while (fraseJC[iJC] != '\0') {
-        if (fraseJC[iJC] != ' ') {
-            contadorJC++;
+int JCcontarLetras_while(char JCfrase[]) {
+    int JCcontador = 0;
+    int JCi = 0;
+    while (JCfrase[JCi] != '\0') {
+        if (JCfrase[JCi] != ' ') {
+            JCcontador++;
         }
-        iJC++;
+        JCi++;
     }
-    return contadorJC;
+    return JCcontador;
 }
-int totalLetrasJC = contarLetrasJC_while(fraseJC);
+int JCtotalLetras = JCcontarLetras_while(JCfrase);
 Frase: hamburguesa
 Tiene 11 letras
 
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
-void eliminarVocalesJC_for(char palabraJC[]) {
+void JCeliminarVocales_for(char JCpalabra[]) {
     printf("Sin vocales (for): ");
-    for (int iJC = 0; palabraJC[iJC] != '\0'; iJC++) {
-        char letraJC = tolower(palabraJC[iJC]);
-        if (letraJC != 'a' && letraJC != 'e' && letraJC != 'i' && letraJC != 'o' && letraJC != 'u') {
-            printf("%c", palabraJC[iJC]);
+    for (int JCi = 0; JCpalabra[JCi] != '\0'; JCi++) {
+        char JCletra = tolower(JCpalabra[JCi]);
+        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u') {
+            printf("%c", JCpalabra[JCi]);
         }
     }
     printf("\n");
 }
 
 
-void eliminarVocalesJC_dowhile(char palabraJC[]) {
-    int iJC = 0;
+void JCeliminarVocales_dowhile(char JCpalabra[]) {
+    int JCi = 0;
     printf("Sin vocales (do-while): ");
-    if (palabraJC[0] == '\0') return;
+    if (JCpalabra[0] == '\0') return;
 
     do {
-        char letraJC = tolower(palabraJC[iJC]);
-        if (letraJC != 'a' && letraJC != 'e' && letraJC != 'i' && letraJC != 'o' && letraJC != 'u') {
-            printf("%c", palabraJC[iJC]);
+        char JCletra = tolower(JCpalabra[JCi]);
+        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u') {
+            printf("%c", JCpalabra[JCi]);
         }
-        iJC++;
-    } while (palabraJC[iJC] != '\0');
+        JCi++;
+    } while (JCpalabra[JCi] != '\0');
     printf("\n");
 }
 
 
-void eliminarVocalesJC_while(char palabraJC[]) {
-    int iJC = 0;
+void JCeliminarVocales_while(char JCpalabra[]) {
+    int JCi = 0;
     printf("Sin vocales (while): ");
-    while (palabraJC[iJC] != '\0') {
-        char letraJC = tolower(palabraJC[iJC]);
-        if (letraJC != 'a' && letraJC != 'e' && letraJC != 'i' && letraJC != 'o' && letraJC != 'u') {
-            printf("%c", palabraJC[iJC]);
+    while (JCpalabra[JCi] != '\0') {
+        char JCletra = tolower(JCpalabra[JCi]);
+        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u') {
+            printf("%c", JCpalabra[JCi]);
         }
-        iJC++;
+        JCi++;
     }
     printf("\n");
 }
 
 int main() {
-    char palabraJC[] = "hamburguesa";
-    printf("Palabra original: %s\n", palabraJC);
+    char JCpalabra[] = "hamburguesa";
+    printf("Palabra original: %s\n", JCpalabra);
 
-    eliminarVocalesJC_for(palabraJC);
-    eliminarVocalesJC_while(palabraJC);
-    eliminarVocalesJC_dowhile(palabraJC);
+    JCeliminarVocales_for(JCpalabra);
+    JCeliminarVocales_while(JCpalabra);
+    JCeliminarVocales_dowhile(JCpalabra);
 
     return 0;
 }
@@ -204,64 +197,60 @@ Sin vocales (while): hmbrgs
 Sin vocales (do-while): hmbrgs
 
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
-void eliminarLetraJC_for(char fraseJC[], char letraEliminarJC) {
-    printf("Frase sin '%c' (for): ", letraEliminarJC);
-    for (int iJC = 0; fraseJC[iJC] != '\0'; iJC++) {
-        if (tolower(fraseJC[iJC]) != tolower(letraEliminarJC)) {
-            printf("%c", fraseJC[iJC]);
+void JCeliminarLetra_for(char JCfrase[], char JCletraEliminar) {
+    printf("Frase sin '%c' (for): ", JCletraEliminar);
+    for (int JCi = 0; JCfrase[JCi] != '\0'; JCi++) {
+        if (tolower(JCfrase[JCi]) != tolower(JCletraEliminar)) {
+            printf("%c", JCfrase[JCi]);
         }
     }
     printf("\n");
 }
 
 
-void eliminarLetraJC_dowhile(char fraseJC[], char letraEliminarJC) {
-    int iJC = 0;
-    printf("Frase sin '%c' (do-while): ", letraEliminarJC);
+void JCeliminarLetra_dowhile(char JCfrase[], char JCletraEliminar) {
+    int JCi = 0;
+    printf("Frase sin '%c' (do-while): ", JCletraEliminar);
 
-    if (fraseJC[0] == '\0') return;
+    if (JCfrase[0] == '\0') return;
 
     do {
-        if (tolower(fraseJC[iJC]) != tolower(letraEliminarJC)) {
-            printf("%c", fraseJC[iJC]);
+        if (tolower(JCfrase[JCi]) != tolower(JCletraEliminar)) {
+            printf("%c", JCfrase[JCi]);
         }
-        iJC++;
-    } while (fraseJC[iJC] != '\0');
+        JCi++;
+    } while (JCfrase[JCi] != '\0');
 
     printf("\n");
 }
 
 
-void eliminarLetraJC_while(char fraseJC[], char letraEliminarJC) {
-    int iJC = 0;
-    printf("Frase sin '%c' (while): ", letraEliminarJC);
-    while (fraseJC[iJC] != '\0') {
-        if (tolower(fraseJC[iJC]) != tolower(letraEliminarJC)) {
-            printf("%c", fraseJC[iJC]);
+void JCeliminarLetra_while(char JCfrase[], char JCletraEliminar) {
+    int JCi = 0;
+    printf("Frase sin '%c' (while): ", JCletraEliminar);
+    while (JCfrase[JCi] != '\0') {
+        if (tolower(JCfrase[JCi]) != tolower(JCletraEliminar)) {
+            printf("%c", JCfrase[JCi]);
         }
-        iJC++;
+        JCi++;
     }
     printf("\n");
 }
 
 int main() {
-    char fraseJC[100];
-    char letraEliminarJC;
+    char JCfrase[100];
+    char JCletraEliminar;
 
     printf("Ingrese una frase: ");
-    fgets(fraseJC, sizeof(fraseJC), stdin);
-    fraseJC[strcspn(fraseJC, "\n")] = '\0'; // Eliminar salto de línea
+    fgets(JCfrase, sizeof(JCfrase), stdin);
+    JCfrase[strcspn(JCfrase, "\n")] = '\0'; // Eliminar salto de línea
 
     printf("Ingrese la letra que desea eliminar: ");
-    scanf(" %c", &letraEliminarJC);
+    scanf(" %c", &JCletraEliminar);
 
-    eliminarLetraJC_for(fraseJC, letraEliminarJC);
-    eliminarLetraJC_while(fraseJC, letraEliminarJC);
-    eliminarLetraJC_dowhile(fraseJC, letraEliminarJC);
+    JCeliminarLetra_for(JCfrase, JCletraEliminar);
+    JCeliminarLetra_while(JCfrase, JCletraEliminar);
+    JCeliminarLetra_dowhile(JCfrase, JCletraEliminar);
 
     return 0;
 }
@@ -271,70 +260,66 @@ Frase sin 'u' (while): hambrgesa
 Frase sin 'u' (do-while): hambrgesa
 
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
-void invertirConVocalesMayusJC_for(char palabraJC[]) {
-    int longitudJC = strlen(palabraJC);
+void JCinvertirConVocalesMayus_for(char JCpalabra[]) {
+    int JClongitud = strlen(JCpalabra);
     printf("Invertida con vocales mayúsculas (for): ");
-    for (int iJC = longitudJC - 1; iJC >= 0; iJC--) {
-        char letraJC = palabraJC[iJC];
-        char letraMinJC = tolower(letraJC);
-        if (letraMinJC == 'a' || letraMinJC == 'e' || letraMinJC == 'i' || letraMinJC == 'o' || letraMinJC == 'u') {
-            printf("%c", toupper(letraMinJC));
+    for (int JCi = JClongitud - 1; JCi >= 0; JCi--) {
+        char JCletra = JCpalabra[JCi];
+        char JCletraMin = tolower(JCletra);
+        if (JCletraMin == 'a' || JCletraMin == 'e' || JCletraMin == 'i' || JCletraMin == 'o' || JCletraMin == 'u') {
+            printf("%c", toupper(JCletraMin));
         } else {
-            printf("%c", letraMinJC);
+            printf("%c", JCletraMin);
         }
     }
     printf("\n");
 }
 
 
-void invertirConVocalesMayusJC_dowhile(char palabraJC[]) {
-    int iJC = strlen(palabraJC) - 1;
+void JCinvertirConVocalesMayus_dowhile(char JCpalabra[]) {
+    int JCi = strlen(JCpalabra) - 1;
     printf("Invertida con vocales mayúsculas (do-while): ");
 
-    if (iJC < 0) return;
+    if (JCi < 0) return;
 
     do {
-        char letraJC = palabraJC[iJC];
-        char letraMinJC = tolower(letraJC);
-        if (letraMinJC == 'a' || letraMinJC == 'e' || letraMinJC == 'i' || letraMinJC == 'o' || letraMinJC == 'u') {
-            printf("%c", toupper(letraMinJC));
+        char JCletra = JCpalabra[JCi];
+        char JCletraMin = tolower(JCletra);
+        if (JCletraMin == 'a' || JCletraMin == 'e' || JCletraMin == 'i' || JCletraMin == 'o' || JCletraMin == 'u') {
+            printf("%c", toupper(JCletraMin));
         } else {
-            printf("%c", letraMinJC);
+            printf("%c", JCletraMin);
         }
-        iJC--;
-    } while (iJC >= 0);
+        JCi--;
+    } while (JCi >= 0);
 
     printf("\n");
 }
 
 
-void invertirConVocalesMayusJC_while(char palabraJC[]) {
-    int iJC = strlen(palabraJC) - 1;
+void JCinvertirConVocalesMayus_while(char JCpalabra[]) {
+    int JCi = strlen(JCpalabra) - 1;
     printf("Invertida con vocales mayúsculas (while): ");
-    while (iJC >= 0) {
-        char letraJC = palabraJC[iJC];
-        char letraMinJC = tolower(letraJC);
-        if (letraMinJC == 'a' || letraMinJC == 'e' || letraMinJC == 'i' || letraMinJC == 'o' || letraMinJC == 'u') {
-            printf("%c", toupper(letraMinJC));
+    while (JCi >= 0) {
+        char JCletra = JCpalabra[JCi];
+        char JCletraMin = tolower(JCletra);
+        if (JCletraMin == 'a' || JCletraMin == 'e' || JCletraMin == 'i' || JCletraMin == 'o' || JCletraMin == 'u') {
+            printf("%c", toupper(JCletraMin));
         } else {
-            printf("%c", letraMinJC);
+            printf("%c", JCletraMin);
         }
-        iJC--;
+        JCi--;
     }
     printf("\n");
 }
 
 int main() {
-    char palabraJC[] = "hamburguesa";
-    printf("Palabra original: %s\n", palabraJC);
+    char JCpalabra[] = "hamburguesa";
+    printf("Palabra original: %s\n", JCpalabra);
 
-    invertirConVocalesMayusJC_for(palabraJC);
-    invertirConVocalesMayusJC_while(palabraJC);
-    invertirConVocalesMayusJC_dowhile(palabraJC);
+    JCinvertirConVocalesMayus_for(JCpalabra);
+    JCinvertirConVocalesMayus_while(JCpalabra);
+    JCinvertirConVocalesMayus_dowhile(JCpalabra);
 
     return 0;
 }
@@ -345,66 +330,62 @@ Invertida con vocales mayúsculas (while): AsEUgrUbmAh
 Invertida con vocales mayúsculas (do-while): AsEUgrUbmAh
 
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
-void invertirConsonantesMayusJC_for(char palabraJC[]) {
-    int longitudJC = strlen(palabraJC);
+void JCinvertirConsonantesMayus_for(char JCpalabra[]) {
+    int JClongitud = strlen(JCpalabra);
     printf("FOR: ");
-    for (int iJC = longitudJC - 1; iJC >= 0; iJC--) {
-        char letraJC = tolower(palabraJC[iJC]);
-        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
-            printf("%c", letraJC);  // vocal en minúscula
+    for (int JCi = JClongitud - 1; JCi >= 0; JCi--) {
+        char JCletra = tolower(JCpalabra[JCi]);
+        if (JCletra == 'a' || JCletra == 'e' || JCletra == 'i' || JCletra == 'o' || JCletra == 'u') {
+            printf("%c", JCletra);  // vocal en minúscula
         } else {
-            printf("%c", toupper(letraJC));  // consonante en mayúscula
+            printf("%c", toupper(JCletra));  // consonante en mayúscula
         }
     }
     printf("\n");
 }
 
 
-void invertirConsonantesMayusJC_while(char palabraJC[]) {
-    int iJC = strlen(palabraJC) - 1;
+void JCinvertirConsonantesMayus_while(char JCpalabra[]) {
+    int JCi = strlen(JCpalabra) - 1;
     printf("WHILE: ");
-    while (iJC >= 0) {
-        char letraJC = tolower(palabraJC[iJC]);
-        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
-            printf("%c", letraJC);
+    while (JCi >= 0) {
+        char JCletra = tolower(JCpalabra[JCi]);
+        if (JCletra == 'a' || JCletra == 'e' || JCletra == 'i' || JCletra == 'o' || JCletra == 'u') {
+            printf("%c", JCletra);
         } else {
-            printf("%c", toupper(letraJC));
+            printf("%c", toupper(JCletra));
         }
-        iJC--;
+        JCi--;
     }
     printf("\n");
 }
 
 
-void invertirConsonantesMayusJC_dowhile(char palabraJC[]) {
-    int iJC = strlen(palabraJC) - 1;
+void JCinvertirConsonantesMayus_dowhile(char JCpalabra[]) {
+    int JCi = strlen(JCpalabra) - 1;
     printf("DO-WHILE: ");
-    if (iJC < 0) return;
+    if (JCi < 0) return;
 
     do {
-        char letraJC = tolower(palabraJC[iJC]);
-        if (letraJC == 'a' || letraJC == 'e' || letraJC == 'i' || letraJC == 'o' || letraJC == 'u') {
-            printf("%c", letraJC);
+        char JCletra = tolower(JCpalabra[JCi]);
+        if (JCletra == 'a' || JCletra == 'e' || JCletra == 'i' || JCletra == 'o' || JCletra == 'u') {
+            printf("%c", JCletra);
         } else {
-            printf("%c", toupper(letraJC));
+            printf("%c", toupper(JCletra));
         }
-        iJC--;
-    } while (iJC >= 0);
+        JCi--;
+    } while (JCi >= 0);
     printf("\n");
 }
 
 int main() {
-    char palabraJC[] = "hamburguesa";
+    char JCpalabra[] = "hamburguesa";
 
-    printf("Palabra original: %s\n", palabraJC);
+    printf("Palabra original: %s\n", JCpalabra);
 
-    invertirConsonantesMayusJC_for(palabraJC);
-    invertirConsonantesMayusJC_while(palabraJC);
-    invertirConsonantesMayusJC_dowhile(palabraJC);
+    JCinvertirConsonantesMayus_for(palabra);
+    JCinvertirConsonantesMayus_while(palabra);
+    JCinvertirConsonantesMayus_dowhile(palabra);
 
     return 0;
 }
@@ -415,68 +396,63 @@ Invertida con consonantes mayúsculas (while): aSeuGRuBMaH
 Invertida con consonantes mayúsculas (do-while): aSeuGRuBMaH
 
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
-
-void eliminarLetraS_JC_for(char fraseJC[]) {
+void JCeliminarLetraS__for(char JCfrase[]) {
     printf("FOR: ");
-    for (int iJC = 0; fraseJC[iJC] != '\0'; iJC++) {
-        char letraJC = toupper(fraseJC[iJC]);
-        if (letraJC != 'S') {
-            printf("%c", letraJC);
+    for (int JCi = 0; JCfrase[JCi] != '\0'; JCi++) {
+        char JCletra = toupper(JCfrase[JCi]);
+        if (JCletra != 'S') {
+            printf("%c", JCletra);
         }
     }
     printf("\n");
 }
 
 
-void eliminarLetraS_JC_while(char fraseJC[]) {
-    int iJC = 0;
+void JCeliminarLetraS__while(char JCfrase[]) {
+    int JCi = 0;
     printf("WHILE: ");
-    while (fraseJC[iJC] != '\0') {
-        char letraJC = toupper(fraseJC[iJC]);
-        if (letraJC != 'S') {
-            printf("%c", letraJC);
+    while (JCfrase[JCi] != '\0') {
+        char JCletra = toupper(JCfrase[JCi]);
+        if (JCletra != 'S') {
+            printf("%c", JCletra);
         }
-        iJC++;
+        JCi++;
     }
     printf("\n");
 }
 
 
-void eliminarLetraS_JC_dowhile(char fraseJC[]) {
-    int iJC = 0;
+void JCeliminarLetraS__dowhile(char JCfrase[]) {
+    int JCi = 0;
     printf("DO-WHILE: ");
-    if (fraseJC[0] == '\0') return;
+    if (JCfrase[0] == '\0') return;
 
     do {
-        char letraJC = toupper(fraseJC[iJC]);
-        if (letraJC != 'S') {
-            printf("%c", letraJC);
+        char JCletra = toupper(JCfrase[JCi]);
+        if (JCletra != 'S') {
+            printf("%c", JCletra);
         }
-        iJC++;
-    } while (fraseJC[iJC] != '\0');
+        JCi++;
+    } while (JCfrase[JCi] != '\0');
     printf("\n");
 }
 
 
 int main() {
-    char fraseJC[100];
+    char JCfrase[100];
 
     printf("Ingrese una frase: ");
-    fgets(fraseJC, sizeof(fraseJC), stdin);
+    fgets(JCfrase, sizeof(JCfrase), stdin);
 
     // Eliminar salto de línea si lo hay
-    size_t lenJC = strlen(fraseJC);
-    if (lenJC > 0 && fraseJC[lenJC - 1] == '\n') {
-        fraseJC[lenJC - 1] = '\0';
+    size_t JClen = strlen(JCfrase);
+    if (JClen > 0 && JCfrase[JClen - 1] == '\n') {
+        JCfrase[JClen - 1] = '\0';
     }
 
-    eliminarLetraS_JC_for(fraseJC);
-    eliminarLetraS_JC_while(fraseJC);
-    eliminarLetraS_JC_dowhile(fraseJC);
+    JCeliminarLetraS__for(JCfrase);
+    JCeliminarLetraS__while(JCfrase);
+    JCeliminarLetraS__dowhile(JCfrase);
 
     return 0;
 }
@@ -486,10 +462,6 @@ Presentarla la palabra con mayusculas sin la letra s (for): PERLA
 Presentarla la palabra con mayusculas sin la letra s (while): PERLA
 Presentarla la palabra con mayusculas sin la letra s (do-while): PERLA
 
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
 void JC_ordenar(char* palabra) {
     int len = strlen(palabra);
@@ -597,10 +569,6 @@ Intento 3: armo
 Fallaste, JC. La respuesta era: roma
 
 
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
-
 int main() {
     char JC_frase[] = "programar es divertido";
     char JC_resultado[100];
@@ -621,10 +589,6 @@ int main() {
     return 0;
 }
 
-
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
 
 int main() {
     char JC_frase[] = "programar es divertido";
@@ -647,10 +611,6 @@ int main() {
     return 0;
 }
 
-
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
 
 int main() {
     char JC_frase[] = "programar es divertido";
