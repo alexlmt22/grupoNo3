@@ -212,12 +212,8 @@ void llSerieS4DoWhile(int llnumero)
 
 void llSerieS5For(int llnumero)
 {
-    int llcontPrimos = 0;
-    int llactual = 2;
-
     printf("\nSerie S5 For:\n");
-
-    while (llcontPrimos < llnumero)
+    for (int llcontPrimos = 0, llactual = 2; llcontPrimos < llnumero; llactual++)
     {
         bool llEsPrimo = true;
 
@@ -236,8 +232,8 @@ void llSerieS5For(int llnumero)
             llcontPrimos++;
         }
 
-        llactual++;
     }
+
     printf("\n");
 }
 
@@ -247,7 +243,7 @@ void llSerieS5While(int llnumero)
     int llactual = 2;
 
     printf("\nSerie S5 While:\n");
-
+    
     while (llcontPrimos < llnumero)
     {
         bool llEsPrimo = true;
@@ -268,6 +264,7 @@ void llSerieS5While(int llnumero)
         }
 
         llactual++;
+
     }
 
     printf("\n");
