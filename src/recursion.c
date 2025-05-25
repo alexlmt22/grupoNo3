@@ -62,7 +62,7 @@ void leaMostrarProducto()
     leaNumero = leaValidarNumero("\nIngrese el primer numero: ");
     leaNumero1 = leaValidarNumero("\nIngrese el segundo numero: ");
     leaProducto=leaRecursionProducto(leaNumero,leaNumero1);
-    printf("\nLa suma de %d y %d es %d\n",leaNumero,leaNumero1,leaProducto);
+    printf("\nEl producto de %d y %d es %d\n",leaNumero,leaNumero1,leaProducto);
 }
 
 int leaRecursionPotencia(int leaBase, int leaExpo)
@@ -82,7 +82,7 @@ void leaMostrarPotencia()
     leaNumero = leaValidarNumero("\nIngrese la base: ");
     leaNumero1 = leaValidarEnteroPositivo("\nIngrese el exponente: ");
     leaPotencia=leaRecursionPotencia(leaNumero,leaNumero1);
-    printf("\nLa suma de %d y %d es %d\n",leaNumero,leaNumero1,leaPotencia);
+    printf("\nEl %d elevado a la potencia de %d es %d\n",leaNumero,leaNumero1,leaPotencia);
 }
 void leaControladorRecursion()
 {

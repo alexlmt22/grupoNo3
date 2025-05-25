@@ -5,6 +5,7 @@
 void leaSerieS1For(int leaNroTermino)
 {
     int leaTermino=0,leaTermino1=1,leaTerminoN=0;
+    printf("\nSeries Numericas:\n");
     printf("\nSerie S1 For:\n");
     for (int i = 1; i <= leaNroTermino; i++)
     {
@@ -103,7 +104,7 @@ void llSerieS3For(int llnumero)
 
     printf("\nSerie S3 For:\n");
 
-    for (int i = llnumero1/llnumero2; i <= llnumero; i++)
+    for (int i = llnumero1/llnumero2; i < llnumero; i++)
     {
         printf("%d/%d ", llnumero1, 2 * i + 1);
         llnumero3 = llnumero1 + llnumero2;
@@ -121,7 +122,7 @@ void llSerieS3While(int llnumero)
     printf("\nSerie S3 While:\n");
 
     int i = llnumero1 / llnumero2;
-    while (i <= llnumero)
+    while (i < llnumero)
     {
         printf("%d/%d ", llnumero1, 2 * i + 1);
         llnumero3 = llnumero1 + llnumero2;
@@ -147,7 +148,7 @@ void llSerieS3DoWhile(int llnumero)
         llnumero1 = llnumero2;
         llnumero2 = llnumero3;
         i++;
-    } while (i <= llnumero);
+    } while (i < llnumero);
 
     printf("\n");
     printf("---------------------------------");
@@ -159,7 +160,7 @@ void llSerieS4For(int llnumero)
 
     printf("\nSerie S4 For:\n");
 
-    for (int i = llnumero1 / llnumero2; i <= llnumero; i++)
+    for (int i = llnumero1 / llnumero2; i < llnumero; i++)
     {
         printf("%d/%d ", llnumero1, 2 * i + 2);
         llnumero3 = llnumero1 + llnumero2;
@@ -177,7 +178,7 @@ void llSerieS4While(int llnumero)
     printf("\nSerie S4 While:\n");
 
     int i = llnumero1 / llnumero2;
-    while (i <= llnumero)
+    while (i < llnumero)
     {
         printf("%d/%d ", llnumero1, 2 * i + 2);
         llnumero3 = llnumero1 + llnumero2;
@@ -203,7 +204,7 @@ void llSerieS4DoWhile(int llnumero)
         llnumero1 = llnumero2;
         llnumero2 = llnumero3;
         i++;
-    } while (i <= llnumero);
+    } while (i < llnumero);
 
     printf("\n");
     printf("---------------------------------");
@@ -237,7 +238,6 @@ void llSerieS5For(int llnumero)
 
         llactual++;
     }
-
     printf("\n");
 }
 
@@ -537,13 +537,14 @@ void leaSerieS11DoWhile(int leaNroTermino)
         leaInicial++;
     } while (leaInicial <= leaNroTermino);
     printf("\n");
-    printf("---------------------------------");
+    printf("---------------------------------\n");
 }
 
 void llSerieS1CFor(int llCantidad)
 {
+    printf("\nSeries de Caracteres:\n");
     printf("\nSerie S1C For:\n");
-    for (int i = 0; i <= llCantidad; i++)
+    for (int i = 0; i < llCantidad; i++)
     {
          printf("%c ", (i % 2 == 0) ? '+' : '-');
     }
@@ -554,7 +555,7 @@ void llSerieS1CWhile(int llCantidad)
 {
     printf("\nSerie S1C While:\n");
     int i = 0;
-    while (i <= llCantidad)
+    while (i < llCantidad)
     {
         printf("%c ", (i % 2 == 0) ? '+' : '-');
         i++;
@@ -570,7 +571,7 @@ void llSerieS1CDoWhile(int llCantidad)
     {
         printf("%c ", (i % 2 == 0) ? '+' : '-');
         i++;
-    } while (i <= llCantidad);
+    } while (i < llCantidad);
     printf("\n");
     printf("---------------------------------");
 }
@@ -813,7 +814,7 @@ void liaserie5cDoWhile(int lianroTerminos)
 void llSerieS6CFor(int llCantidad)
 {
     printf("\nSerie S6C For:\n");
-    for (int i = 0; i <= llCantidad; i++)
+    for (int i = 0; i < llCantidad; i++)
     {
         printf("%c ", 'a' + i);
     }
@@ -824,7 +825,7 @@ void llSerieS6CWhile(int llCantidad)
 {
     printf("\nSerie S6C While:\n");
     int i = 0;
-    while (i <= llCantidad)
+    while (i < llCantidad)
     {
         printf("%c ", 'a' + i);
         i++;
@@ -840,7 +841,7 @@ void llSerieS6CWhile(int llCantidad)
     {
         printf("%c ", 'a' + i);
         i++;
-    } while (i <= llCantidad);
+    } while (i < llCantidad);
     printf("\n");
     printf("---------------------------------");
 }
@@ -849,7 +850,7 @@ void llSerieS7CFor(int llCantidad)
 {
     printf("\nSerie S7C For:\n");
 
-    for (int i = 0; i <= llCantidad * 2 - 1; i++)
+    for (int i = 0; i < llCantidad; i++)
     {
         if (i % 2 == 0)
         {
@@ -868,7 +869,7 @@ void llSerieS7CWhile(int llCantidad)
 {
     printf("\nSerie S7C While:\n");
     int i = 0;
-    while (i <= llCantidad * 2 - 1)
+    while (i < llCantidad)
     {
         if (i % 2 == 0)
         {
@@ -898,7 +899,7 @@ void llSerieS7CDoWhile(int llCantidad)
             printf("%c ", (i / 2) % 2 == 0 ? '+' : '-');
         }
         i++;
-    } while (i <= llCantidad * 2 - 1);
+    } while (i < llCantidad);
     printf("\n");
     printf("---------------------------------");
 }
@@ -906,7 +907,7 @@ void llSerieS7CDoWhile(int llCantidad)
 void llSerieS8CFor(int llCantidad)
 {
     printf("\nSerie S8C For:\n");
-    for (int i = 0; i <= llCantidad; i++)
+    for (int i = 0; i < llCantidad; i++)
     {
         char llLetra = 'a' + i;
         int llrepeticiones = 2 * (i + 1);
@@ -923,7 +924,7 @@ void llSerieS8CWhile(int llCantidad)
 {
     printf("\nSerie S8C While:\n");
     int i = 0;
-    while (i <= llCantidad)
+    while (i < llCantidad)
     {
         char llLetra = 'a' + i;
         int llrepeticiones = 2 * (i + 1);
@@ -955,7 +956,7 @@ void llSerieS8CDoWhile(int llCantidad)
         } while (j < llrepeticiones);
         printf(" ");
         i++;
-    } while (i <= llCantidad);
+    } while (i < llCantidad);
     printf("\n");
     printf("---------------------------------");
 }
@@ -963,7 +964,7 @@ void llSerieS8CDoWhile(int llCantidad)
 void llSerieS9CFor(int llCantidad)
 {
     printf("\nSerie S9C For:\n");
-    for (int i = 0; i <= llCantidad; i++)
+    for (int i = 0; i < llCantidad; i++)
     {
         char llLetra = 'a' + i;
         int llrepeticiones = (i * 2) + 1;
@@ -980,7 +981,7 @@ void llSerieS9CWhile(int llCantidad)
 {
     printf("\nSerie S9C While:\n");
     int i = 0;
-    while (i <= llCantidad)
+    while (i < llCantidad)
     {
         char llLetra = 'a' + i;
         int llrepeticiones = (i * 2) + 1;
@@ -1012,7 +1013,7 @@ void llSerieS9CDoWhile(int llCantidad)
         } while (j < llrepeticiones);
         printf(" ");
         i++;
-    } while (i <= llCantidad);
+    } while (i < llCantidad);
     printf("\n");
     printf("---------------------------------");
 }
