@@ -13,7 +13,7 @@ int main()
     leaVerPortada();
     leaControladorSerie();
     llControladorArray();
-    leaControladorFiguras();
+    *leaControladorFiguras();
     
     cargaRotativaForIM();
     cargaRotativawhileIM();

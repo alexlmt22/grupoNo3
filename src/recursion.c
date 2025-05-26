@@ -84,6 +84,42 @@ void leaMostrarPotencia()
     leaPotencia=leaRecursionPotencia(leaNumero,leaNumero1);
     printf("\nEl %d elevado a la potencia de %d es %d\n",leaNumero,leaNumero1,leaPotencia);
 }
+
+void leaConteoProgresivo(int leaNumero){
+    if(leaNumero < 1)
+    {
+        return;
+    }
+    
+    leaConteoProgresivo(leaNumero-1);
+    printf("Cuenta progresiva: %d\n", leaNumero);
+}
+
+void leaMostrarConteoPro()
+{
+    int leaNumero = 0;
+    leaNumero = leaValidarEntero("\n\tConteo Progresivo\nIngrese un numero: ");
+    leaConteoProgresivo(leaNumero);
+
+}
+
+void leaConteoRegresivo(int leaNumero){
+    if(leaNumero < 0)
+    {
+        return;
+    }
+    printf("Cuenta progresiva: %d\n", leaNumero);
+    leaConteoRegresivo(leaNumero-1);
+}
+
+void leaMostrarConteoReg()
+{
+    int leaNumero = 0;
+    leaNumero = leaValidarEntero("\n\tConteo Regresivo\nIngrese un numero: ");
+    leaConteoRegresivo(leaNumero);
+
+}
+
 void leaControladorRecursion()
 {
   
@@ -92,5 +128,7 @@ void leaControladorRecursion()
     leaMostrarSuma();
     leaMostrarProducto();
     leaMostrarPotencia();
+    leaMostrarConteoPro();
+    leaMostrarConteoReg();
       
 }
