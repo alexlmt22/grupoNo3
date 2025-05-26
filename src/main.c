@@ -6,12 +6,14 @@
 #include "serieNumericaCaracter.c"
 #include "array.c"
 #include "recursion.c"
+#include "figuras.c"
 
 int main()
 {
     leaVerPortada();
     leaControladorSerie();
     llControladorArray();
+    leaControladorFiguras();
     
     cargaRotativaForIM();
     cargaRotativawhileIM();
