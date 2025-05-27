@@ -134,4 +134,27 @@ int leaValidarNumero(char *leaMensaje)
         printf("Error de entrada. \nVuelva a intentarlo\n"); 
     }
 }
+
+void leaValidarLetras(char *leaMensaje, char *leaSalida, int tamanoMax) {
+    bool leaValido;
+
+    do {
+        printf("%s", leaMensaje);
+        if (fgets(leaSalida, tamanoMax, stdin) == NULL) continue;
+        leaSalida[strcspn(leaSalida, "\n")] = '\0';
+        
+        leaValido = true;
+        for (int i = 0; leaSalida[i] != '\0'; i++) {
+            if (!isalpha(leaSalida[i]) && leaSalida[i] != ' ') {
+                leaValido = false;
+                break;
+            }
+        }
+
+        if (leaValido && leaSalida[0] != '\0') return;
+        
+        printf("Error: Solo letras y espacios\nVuelva a intentarlo\n");
+    } while (true);
+}
+
 #endif

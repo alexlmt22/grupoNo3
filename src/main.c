@@ -2,7 +2,7 @@
 #include "portada.c"
 #include "Loading.c"
 #include "windows.h"
-
+#include "cadenaCaracteres.c"
 #include "serieNumericaCaracter.c"
 #include "array.c"
 #include "recursion.c"
@@ -13,7 +13,8 @@ int main()
     leaVerPortada();
     leaControladorSerie();
     llControladorArray();
-    *leaControladorFiguras();
+    ControladorCadenaCaracteres();
+    leaControladorFiguras();
     
     cargaRotativaForIM();
     cargaRotativawhileIM();

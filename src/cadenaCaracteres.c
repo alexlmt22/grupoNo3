@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <time.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include "../lib/tool.h"
 
-// Función para contar vocales
 int JCcontarVocales(char JCfrase[]) {
     int JCcontador = 0;
     for (int i = 0; JCfrase[i] != '\0'; i++) {
@@ -14,19 +17,7 @@ int JCcontarVocales(char JCfrase[]) {
     return JCcontador;
 }
 
-int main() {
-    char JCfrase[] = "hamburguesa";  // Frase fija
-    printf("Frase: %s\n", JCfrase);
-
-    int JCtotalVocales = JCcontarVocales(JCfrase);
-    printf("Tiene %d vocales\n", JCtotalVocales);
-    return 0;
-}
-Frase: hamburguesa
-Tiene 5 vocales
-
-
-int JCcontarVocales(char JCfrase[]) {
+int JCcontarVocalesDoWhile(char JCfrase[]) {
     int JCcontador = 0;
     int JCi = 0;
     char JCletra;
@@ -42,19 +33,7 @@ int JCcontarVocales(char JCfrase[]) {
     return JCcontador;
 }
 
-int main() {
-    char JCfrase[] = "hamburguesa";
-    printf("Frase: %s\n", JCfrase);
-
-    int JCtotalVocales = JCcontarVocales(JCfrase);
-    printf("Tiene %d vocales\n", JCtotalVocales);
-    return 0;
-}
-Frase: hamburguesa
-Tiene 5 vocales
-
-
-int JCcontarVocales(char JCfrase[]) {
+int JCcontarVocalesWhile(char JCfrase[]) {
     int JCcontador = 0;
     int JCi = 0;
     char JCletra;
@@ -70,109 +49,119 @@ int JCcontarVocales(char JCfrase[]) {
     return JCcontador;
 }
 
-int main() {
-    char JCfrase[] = "hamburguesa";
-    printf("Frase: %s\n", JCfrase);
-
-    int JCtotalVocales = JCcontarVocales(JCfrase);
-    printf("Tiene %d vocales\n", JCtotalVocales);
-    return 0;
+void leaContadorVocales()
+{
+    int leasizeTexto=100;
+    char leatexto[leasizeTexto];
+    int leaNroVocalF,leaNroVocalW,leaNroVocalDw;
+    leaValidarLetras("Ingrese un texto : ", leatexto, sizeof(leatexto));
+    leaNroVocalF = JCcontarVocales(leatexto);
+    printf("FOR --> Tiene %d vocales\n",leaNroVocalF);
+    leaNroVocalDw = JCcontarVocalesDoWhile(leatexto);
+    printf("DO WHILE --> Tiene %d vocales\n",leaNroVocalDw);
+    leaNroVocalW = JCcontarVocalesWhile(leatexto);
+    printf("WHILE --> Tiene %d vocales\n",leaNroVocalW);
 }
-Frase: hamburguesa
-Tiene 5 vocales
 
-
-int JCcontarLetras_for(char JCfrase[]) {
+int JCcontarConsonantes(char JCfrase[]) {
     int JCcontador = 0;
-    for (int JCi = 0; JCfrase[JCi] != '\0'; JCi++) {
-        if (JCfrase[JCi] != ' ') {
+    for (int i = 0; JCfrase[i] != '\0'; i++) {
+        char JCletra = tolower(JCfrase[i]);
+        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u' && JCletra != ' ') {
             JCcontador++;
         }
     }
     return JCcontador;
 }
 
-int main() {
-    char JCfrase[] = "hamburguesa";
-    printf("Frase: %s\n", JCfrase);
-
-    int JCtotalLetras = JCcontarLetras_for(JCfrase);
-    printf("Tiene %d letras\n", JCtotalLetras);
-    return 0;
-}
-Frase: hamburguesa
-Tiene 11 letras
-
-
-int JCcontarLetras_dowhile(char JCfrase[]) {
+int JCcontarConsonantesDoWhile(char JCfrase[]) {
     int JCcontador = 0;
     int JCi = 0;
-    if (JCfrase[0] == '\0') return 0;
+    char JCletra;
 
     do {
-        if (JCfrase[JCi] != ' ') {
+        JCletra = tolower(JCfrase[JCi]);
+        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u' && JCletra != ' ') {
             JCcontador++;
         }
         JCi++;
-    } while (JCfraseJC[JCi] != '\0');
+    } while (JCfrase[JCi] != '\0');
 
     return JCcontador;
 }
-int JCtotalLetras = JCcontarLetras_dowhile(JCfrase);
-Frase: hamburguesa
-Tiene 11 letras
 
-
-int JCcontarLetras_while(char JCfrase[]) {
+int JCcontarConsonantesWhile(char JCfrase[]) {
     int JCcontador = 0;
     int JCi = 0;
+    char JCletra;
+
     while (JCfrase[JCi] != '\0') {
-        if (JCfrase[JCi] != ' ') {
+        JCletra = tolower(JCfrase[JCi]);
+        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u' && JCletra != ' ') {
             JCcontador++;
         }
         JCi++;
     }
+
     return JCcontador;
 }
-int JCtotalLetras = JCcontarLetras_while(JCfrase);
-Frase: hamburguesa
-Tiene 11 letras
 
+void leaContarConsonates()
+{
+    int leasizeTexto=100;
+    char leatexto[leasizeTexto];
+    int leaConsonanteF,leaConsonanteW,leaConsonanteDw;
+    leaValidarLetras("Ingrese un texto : ", leatexto, sizeof(leatexto));
+    leaConsonanteF = JCcontarConsonantes(leatexto);
+    printf("FOR --> Tiene %d letras\n",leaConsonanteF);
+    leaConsonanteDw = JCcontarConsonantesDoWhile(leatexto);
+    printf("DO WHILE --> Tiene %d letras\n",leaConsonanteDw);
+    leaConsonanteW = JCcontarConsonantesWhile(leatexto);
+    printf("WHILE --> Tiene %d letras\n",leaConsonanteW);
+}
 
-void JCeliminarVocales_for(char JCpalabra[]) {
-    printf("Sin vocales (for): ");
+char leaLeerVocal(char *leaMensaje)
+{
+    char leaVocal;
+    bool leaEntradaValida;
+    do
+    {
+        printf("%s",leaMensaje);
+        leaVocal = getchar();
+        leaEntradaValida = (getchar() == '\n');
+        if (!leaEntradaValida) {
+            while (getchar() != '\n');
+        }else{
+            leaVocal = tolower(leaVocal);
+            if (leaVocal != 'a' && leaVocal != 'e' && leaVocal != 'i' && leaVocal != 'o' && leaVocal != 'u')
+            {
+                printf("Erro de entrada.\nVuelva a Intentarlo\n");
+            }
+            
+        }
+    } while (!leaEntradaValida);
+    return leaVocal;
+}
+
+void JCeliminarVocales_for(char JCpalabra[],char leaVocal) {
+    printf("Sin vocal (for): ");
     for (int JCi = 0; JCpalabra[JCi] != '\0'; JCi++) {
         char JCletra = tolower(JCpalabra[JCi]);
-        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u') {
+        char leaVocalLower = tolower(leaVocal);
+        if (JCletra != leaVocalLower) {
             printf("%c", JCpalabra[JCi]);
         }
     }
     printf("\n");
 }
 
-
-void JCeliminarVocales_dowhile(char JCpalabra[]) {
+void JCeliminarVocal_while(char JCpalabra[], char leaVocal) {
+    printf("Sin vocal (while): ");
     int JCi = 0;
-    printf("Sin vocales (do-while): ");
-    if (JCpalabra[0] == '\0') return;
-
-    do {
-        char JCletra = tolower(JCpalabra[JCi]);
-        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u') {
-            printf("%c", JCpalabra[JCi]);
-        }
-        JCi++;
-    } while (JCpalabra[JCi] != '\0');
-    printf("\n");
-}
-
-
-void JCeliminarVocales_while(char JCpalabra[]) {
-    int JCi = 0;
-    printf("Sin vocales (while): ");
     while (JCpalabra[JCi] != '\0') {
         char JCletra = tolower(JCpalabra[JCi]);
-        if (JCletra != 'a' && JCletra != 'e' && JCletra != 'i' && JCletra != 'o' && JCletra != 'u') {
+        char leaVocalLower = tolower(leaVocal);
+        if (JCletra != leaVocalLower) {
             printf("%c", JCpalabra[JCi]);
         }
         JCi++;
@@ -180,22 +169,63 @@ void JCeliminarVocales_while(char JCpalabra[]) {
     printf("\n");
 }
 
-int main() {
-    char JCpalabra[] = "hamburguesa";
-    printf("Palabra original: %s\n", JCpalabra);
-
-    JCeliminarVocales_for(JCpalabra);
-    JCeliminarVocales_while(JCpalabra);
-    JCeliminarVocales_dowhile(JCpalabra);
-
-    return 0;
+void JCeliminarVocal_doWhile(char JCpalabra[], char leaVocal) {
+    printf("Sin vocal (do-while): ");
+    int JCi = 0;
+    do {
+        char JCletra = tolower(JCpalabra[JCi]);
+        char leaVocalLower = tolower(leaVocal);
+        if (JCletra != leaVocalLower && JCpalabra[JCi] != '\0') {
+            printf("%c", JCpalabra[JCi]);
+        }
+        JCi++;
+    } while (JCpalabra[JCi - 1] != '\0');
+    printf("\n");
 }
 
-Palabra original: hamburguesa
-Sin vocales (for): hmbrgs
-Sin vocales (while): hmbrgs
-Sin vocales (do-while): hmbrgs
+void leaEliminarVocal()
+{
+    int leasizeTexto=100;
+    char leatexto[leasizeTexto];
+    char leanrovocales;
+    leaValidarLetras("Ingrese un texto: ", leatexto, sizeof(leatexto));
+    leanrovocales = leaLeerVocal("Ingrese la vocal: ");
+    JCeliminarVocales_for(leatexto,leanrovocales);
+    JCeliminarVocal_while(leatexto,leanrovocales);
+    JCeliminarVocal_doWhile(leatexto,leanrovocales);
+}
 
+char leaLeerConsonante(char *leaMensaje)
+{
+    char leaConsonante;
+    bool leaEntradaValida;
+    
+    do
+    {
+        printf("%s", leaMensaje);
+        leaConsonante = getchar();
+        leaEntradaValida = (getchar() == '\n');
+        
+        if (!leaEntradaValida) 
+        {
+            while (getchar() != '\n');
+        }
+        else{
+            leaConsonante = tolower(leaConsonante);
+            if (!isalpha(leaConsonante)){
+                printf("\nError de entrada.\n");
+            }
+            else if (leaConsonante == 'a' || leaConsonante == 'e' || leaConsonante == 'i' || leaConsonante == 'o' || leaConsonante == 'u') {
+                printf("\nError de entrada.\n");
+            }
+            else {
+                return leaConsonante;
+            }
+        }
+        
+        printf("Vuelva a intentarlo.\n");
+    } while (true);
+}
 
 void JCeliminarLetra_for(char JCfrase[], char JCletraEliminar) {
     printf("Frase sin '%c' (for): ", JCletraEliminar);
@@ -206,7 +236,6 @@ void JCeliminarLetra_for(char JCfrase[], char JCletraEliminar) {
     }
     printf("\n");
 }
-
 
 void JCeliminarLetra_dowhile(char JCfrase[], char JCletraEliminar) {
     int JCi = 0;
@@ -224,7 +253,6 @@ void JCeliminarLetra_dowhile(char JCfrase[], char JCletraEliminar) {
     printf("\n");
 }
 
-
 void JCeliminarLetra_while(char JCfrase[], char JCletraEliminar) {
     int JCi = 0;
     printf("Frase sin '%c' (while): ", JCletraEliminar);
@@ -237,28 +265,17 @@ void JCeliminarLetra_while(char JCfrase[], char JCletraEliminar) {
     printf("\n");
 }
 
-int main() {
-    char JCfrase[100];
-    char JCletraEliminar;
-
-    printf("Ingrese una frase: ");
-    fgets(JCfrase, sizeof(JCfrase), stdin);
-    JCfrase[strcspn(JCfrase, "\n")] = '\0'; // Eliminar salto de línea
-
-    printf("Ingrese la letra que desea eliminar: ");
-    scanf(" %c", &JCletraEliminar);
-
-    JCeliminarLetra_for(JCfrase, JCletraEliminar);
-    JCeliminarLetra_while(JCfrase, JCletraEliminar);
-    JCeliminarLetra_dowhile(JCfrase, JCletraEliminar);
-
-    return 0;
+void leaEliminarConsonate()
+{
+    int leasizeTexto=100;
+    char leatexto[leasizeTexto];
+    char leanroCon;
+    leaValidarLetras("Ingrese un texto: ", leatexto, sizeof(leatexto));
+    leanroCon = leaLeerVocal("Ingrese la consonate: ");
+    JCeliminarLetra_for(leatexto,leanroCon);
+    JCeliminarLetra_dowhile(leatexto,leanroCon);
+    JCeliminarLetra_while(leatexto,leanroCon);
 }
-
-Frase sin 'u' (for): hambrgesa
-Frase sin 'u' (while): hambrgesa
-Frase sin 'u' (do-while): hambrgesa
-
 
 void JCinvertirConVocalesMayus_for(char JCpalabra[]) {
     int JClongitud = strlen(JCpalabra);
@@ -274,7 +291,6 @@ void JCinvertirConVocalesMayus_for(char JCpalabra[]) {
     }
     printf("\n");
 }
-
 
 void JCinvertirConVocalesMayus_dowhile(char JCpalabra[]) {
     int JCi = strlen(JCpalabra) - 1;
@@ -296,7 +312,6 @@ void JCinvertirConVocalesMayus_dowhile(char JCpalabra[]) {
     printf("\n");
 }
 
-
 void JCinvertirConVocalesMayus_while(char JCpalabra[]) {
     int JCi = strlen(JCpalabra) - 1;
     printf("Invertida con vocales mayúsculas (while): ");
@@ -313,22 +328,15 @@ void JCinvertirConVocalesMayus_while(char JCpalabra[]) {
     printf("\n");
 }
 
-int main() {
-    char JCpalabra[] = "hamburguesa";
-    printf("Palabra original: %s\n", JCpalabra);
-
-    JCinvertirConVocalesMayus_for(JCpalabra);
-    JCinvertirConVocalesMayus_while(JCpalabra);
-    JCinvertirConVocalesMayus_dowhile(JCpalabra);
-
-    return 0;
+void leaInvertirVocal()
+{
+    int leasizeTexto=100;
+    char leatexto[leasizeTexto];
+    leaValidarLetras("Ingrese un texto : ", leatexto, sizeof(leatexto));
+    JCinvertirConVocalesMayus_for(leatexto);
+    JCinvertirConVocalesMayus_dowhile(leatexto);
+    JCinvertirConVocalesMayus_while(leatexto);
 }
-
-Palabra original: hamburguesa
-Invertida con vocales mayúsculas (for): AsEUgrUbmAh
-Invertida con vocales mayúsculas (while): AsEUgrUbmAh
-Invertida con vocales mayúsculas (do-while): AsEUgrUbmAh
-
 
 void JCinvertirConsonantesMayus_for(char JCpalabra[]) {
     int JClongitud = strlen(JCpalabra);
@@ -344,7 +352,6 @@ void JCinvertirConsonantesMayus_for(char JCpalabra[]) {
     printf("\n");
 }
 
-
 void JCinvertirConsonantesMayus_while(char JCpalabra[]) {
     int JCi = strlen(JCpalabra) - 1;
     printf("WHILE: ");
@@ -359,7 +366,6 @@ void JCinvertirConsonantesMayus_while(char JCpalabra[]) {
     }
     printf("\n");
 }
-
 
 void JCinvertirConsonantesMayus_dowhile(char JCpalabra[]) {
     int JCi = strlen(JCpalabra) - 1;
@@ -378,49 +384,39 @@ void JCinvertirConsonantesMayus_dowhile(char JCpalabra[]) {
     printf("\n");
 }
 
-int main() {
-    char JCpalabra[] = "hamburguesa";
-
-    printf("Palabra original: %s\n", JCpalabra);
-
-    JCinvertirConsonantesMayus_for(palabra);
-    JCinvertirConsonantesMayus_while(palabra);
-    JCinvertirConsonantesMayus_dowhile(palabra);
-
-    return 0;
+void leaInvertirCon()
+{
+    int leasizeTexto=100;
+    char leatexto[leasizeTexto];
+    leaValidarLetras("Ingrese un texto : ", leatexto, sizeof(leatexto));
+    JCinvertirConsonantesMayus_for(leatexto);
+    JCinvertirConsonantesMayus_while(leatexto);
+    JCinvertirConsonantesMayus_dowhile(leatexto);
 }
-
-Palabra original: hamburguesa
-Invertida con consonantes mayúsculas (for): aSeuGRuBMaH
-Invertida con consonantes mayúsculas (while): aSeuGRuBMaH
-Invertida con consonantes mayúsculas (do-while): aSeuGRuBMaH
-
 
 void JCeliminarLetraS__for(char JCfrase[]) {
     printf("FOR: ");
     for (int JCi = 0; JCfrase[JCi] != '\0'; JCi++) {
         char JCletra = toupper(JCfrase[JCi]);
-        if (JCletra != 'S') {
+        if (JCletra != 'J') {
             printf("%c", JCletra);
         }
     }
     printf("\n");
 }
-
 
 void JCeliminarLetraS__while(char JCfrase[]) {
     int JCi = 0;
     printf("WHILE: ");
     while (JCfrase[JCi] != '\0') {
         char JCletra = toupper(JCfrase[JCi]);
-        if (JCletra != 'S') {
+        if (JCletra != 'J') {
             printf("%c", JCletra);
         }
         JCi++;
     }
     printf("\n");
 }
-
 
 void JCeliminarLetraS__dowhile(char JCfrase[]) {
     int JCi = 0;
@@ -429,7 +425,7 @@ void JCeliminarLetraS__dowhile(char JCfrase[]) {
 
     do {
         char JCletra = toupper(JCfrase[JCi]);
-        if (JCletra != 'S') {
+        if (JCletra != 'J') {
             printf("%c", JCletra);
         }
         JCi++;
@@ -437,31 +433,16 @@ void JCeliminarLetraS__dowhile(char JCfrase[]) {
     printf("\n");
 }
 
+void leaEliminarLetra()
+{
+    int leasizeTexto=100;
+    char leatexto[leasizeTexto];
+    leaValidarLetras("Ingrese un texto : ", leatexto, sizeof(leatexto));
+    JCeliminarLetraS__for(leatexto);
+    JCeliminarLetraS__while(leatexto);
+    JCeliminarLetraS__dowhile(leatexto);
 
-int main() {
-    char JCfrase[100];
-
-    printf("Ingrese una frase: ");
-    fgets(JCfrase, sizeof(JCfrase), stdin);
-
-    // Eliminar salto de línea si lo hay
-    size_t JClen = strlen(JCfrase);
-    if (JClen > 0 && JCfrase[JClen - 1] == '\n') {
-        JCfrase[JClen - 1] = '\0';
-    }
-
-    JCeliminarLetraS__for(JCfrase);
-    JCeliminarLetraS__while(JCfrase);
-    JCeliminarLetraS__dowhile(JCfrase);
-
-    return 0;
 }
-
-Palabra original: Perlas
-Presentarla la palabra con mayusculas sin la letra s (for): PERLA
-Presentarla la palabra con mayusculas sin la letra s (while): PERLA
-Presentarla la palabra con mayusculas sin la letra s (do-while): PERLA
-
 
 void JC_ordenar(char* palabra) {
     int len = strlen(palabra);
@@ -477,7 +458,8 @@ void JC_ordenar(char* palabra) {
 }
 
 int JC_esAnagrama(char* p1, char* p2) {
-    char temp1[50], temp2[50];
+    int leasizeT = 50;
+    char temp1[leasizeT], temp2[leasizeT];
     strcpy(temp1, p1);
     strcpy(temp2, p2);
     JC_ordenar(temp1);
@@ -485,92 +467,129 @@ int JC_esAnagrama(char* p1, char* p2) {
     return strcmp(temp1, temp2) == 0;
 }
 
-int main() {
-    char JC_palabra[] = "amor";
-    char JC_anagrama[] = "roma";
-    char JC_intento[50];
+void leaAnagramaFor() {
+    int leaTotal = 5;
+    int leaSizeT = 50;
+    srand(time(NULL));
     
-    printf("Adivina un anagrama de: %s\n", JC_palabra);
+    char JC_palabra[5][50] = {"delira", "ballena", "alondra", "esparta", "enrique"};
+    char JC_anagrama[5][50] = {"lidera", "llenaba", "ladrona", "apartes", "quieren"};
+    
+    int leaIndice = rand() % leaTotal;
+    char *leaPalabraAc = JC_palabra[leaIndice];
+    char *leaAnagramaAc = JC_anagrama[leaIndice];
+    printf("\nAnagrama For\n");
+    printf("Adivina un anagrama de: %s\n", leaPalabraAc);  
+    bool leaAcierto = false;
+    char JC_intento[leaSizeT];
 
-    for (int JC_intentos = 0; JC_intentos < 3; JC_intentos++) {
+    for (int JC_intentos = 0; JC_intentos < 3; JC_intentos++) {  
         printf("Intento %d: ", JC_intentos + 1);
         scanf("%s", JC_intento);
 
-        if (JC_esAnagrama(JC_palabra, JC_intento) && strcmp(JC_intento, JC_anagrama) == 0) {
-            printf("¡Correcto, JC!\n");
-            return 0;
+        if (JC_esAnagrama(leaPalabraAc, JC_intento) && strcmp(JC_intento, leaAnagramaAc) == 0) {
+            printf("Correcto, JC! El anagrama es: %s\n", leaAnagramaAc); 
+            leaAcierto = true;
+            break;
+        } else {
+            printf("Incorrecto");
+            if (JC_intentos < 2) { 
+                printf(", intenta de nuevo\n");
+            } else {
+                printf("\n");
+            }
         }
     }
+    
+    if(!leaAcierto) {
+        printf("Fallaste, JC. La respuesta era: %s\n", leaAnagramaAc);
+    }
+}  
 
-    printf("Fallaste, JC. La respuesta era: %s\n", JC_anagrama);
-    return 0;
-}
-
-
-int main() {
-    char JC_palabra[] = "amor";
-    char JC_anagrama[] = "roma";
-    char JC_intento[50];
+void leaAnagramaWhile() {
+    int leaTotal = 5;
+    int leaSizeT = 50;
+    srand(time(NULL));
+    
+    char JC_palabra[5][50] = {"delira", "ballena", "alondra", "esparta", "enrique"};
+    char JC_anagrama[5][50] = {"lidera", "llenaba", "ladrona", "apartes", "quieren"};
+    
+    int leaIndice = rand() % leaTotal;
+    char *leaPalabraAc = JC_palabra[leaIndice];
+    char *leaAnagramaAc = JC_anagrama[leaIndice];
+    printf("\nAnagrama While\n");
+    printf("Adivina un anagrama de: %s\n", leaPalabraAc);  
+    bool leaAcierto = false;
+    char JC_intento[leaSizeT];
+    
     int JC_intentos = 0;
-
-    printf("Adivina un anagrama de: %s\n", JC_palabra);
-
     while (JC_intentos < 3) {
         printf("Intento %d: ", JC_intentos + 1);
         scanf("%s", JC_intento);
 
-        if (JC_esAnagrama(JC_palabra, JC_intento) && strcmp(JC_intento, JC_anagrama) == 0) {
-            printf("¡Correcto, JC!\n");
-            return 0;
+        if (JC_esAnagrama(leaPalabraAc, JC_intento) && strcmp(JC_intento, leaAnagramaAc) == 0) {
+            printf("Correcto, JC! El anagrama es: %s\n", leaAnagramaAc); 
+            leaAcierto = true;
+            break;
+        } else {
+            printf("Incorrecto");
+            if (JC_intentos < 2) { 
+                printf(", intenta de nuevo\n");
+            } else {
+                printf("\n");
+            }
         }
-
         JC_intentos++;
     }
-
-    printf("Fallaste, JC. La respuesta era: %s\n", JC_anagrama);
-    return 0;
+    
+    if(!leaAcierto) {
+        printf("Fallaste, JC. La respuesta era: %s\n", leaAnagramaAc);
+    }
 }
 
-
-int main() {
-    char JC_palabra[] = "amor";
-    char JC_anagrama[] = "roma";
-    char JC_intento[50];
+void leaAnagramaDoWhile() {
+    int leaTotal = 5;
+    int leaSizeT = 50;
+    srand(time(NULL));
+    
+    char JC_palabra[5][50] = {"delira", "ballena", "alondra", "esparta", "enrique"};
+    char JC_anagrama[5][50] = {"lidera", "llenaba", "ladrona", "apartes", "quieren"};
+    
+    int leaIndice = rand() % leaTotal;
+    char *leaPalabraAc = JC_palabra[leaIndice];
+    char *leaAnagramaAc = JC_anagrama[leaIndice];
+    printf("\nAnagrama Do While\n");
+    printf("Adivina un anagrama de: %s\n", leaPalabraAc);  
+    bool leaAcierto = false;
+    char JC_intento[leaSizeT];
+    
     int JC_intentos = 0;
-
-    printf("Adivina un anagrama de: %s\n", JC_palabra);
-
     do {
         printf("Intento %d: ", JC_intentos + 1);
         scanf("%s", JC_intento);
 
-        if (JC_esAnagrama(JC_palabra, JC_intento) && strcmp(JC_intento, JC_anagrama) == 0) {
-            printf("¡Correcto, JC!\n");
-            return 0;
+        if (JC_esAnagrama(leaPalabraAc, JC_intento) && strcmp(JC_intento, leaAnagramaAc) == 0) {
+            printf("Correcto, JC! El anagrama es: %s\n", leaAnagramaAc); 
+            leaAcierto = true;
+            break;
+        } else {
+            printf("Incorrecto");
+            if (JC_intentos < 2) { 
+                printf(", intenta de nuevo\n");
+            } else {
+                printf("\n");
+            }
         }
-
         JC_intentos++;
     } while (JC_intentos < 3);
-
-    printf("Fallaste, JC. La respuesta era: %s\n", JC_anagrama);
-    return 0;
+    
+    if(!leaAcierto) {
+        printf("Fallaste, JC. La respuesta era: %s\n", leaAnagramaAc);
+    }
 }
 
-Adivina un anagrama de: amor
-Intento 1: ramo
-Intento 2: mora
-Intento 3: roma
-¡Correcto, JC!
-
-Adivina un anagrama de: amor
-Intento 1: ramo
-Intento 2: mora
-Intento 3: armo
-Fallaste, JC. La respuesta era: roma
-
-
-int main() {
-    char JC_frase[] = "programar es divertido";
+void leaConvertirMayMinFor(char JC_frase[])
+{
     char JC_resultado[100];
     int JC_contador = 0;
 
@@ -586,12 +605,10 @@ int main() {
     JC_resultado[strlen(JC_frase)] = '\0';
 
     printf("FOR -> %s\n", JC_resultado);
-    return 0;
 }
 
-
-int main() {
-    char JC_frase[] = "programar es divertido";
+void leaConvertirMayMinWhile(char JC_frase[])
+{
     char JC_resultado[100];
     int i = 0, JC_contador = 0;
 
@@ -608,12 +625,10 @@ int main() {
     JC_resultado[i] = '\0';
 
     printf("WHILE -> %s\n", JC_resultado);
-    return 0;
 }
 
-
-int main() {
-    char JC_frase[] = "programar es divertido";
+void leaConvertirMayMinDoWhile(char JC_frase[])
+{
     char JC_resultado[100];
     int i = 0, JC_contador = 0;
 
@@ -632,9 +647,31 @@ int main() {
     JC_resultado[i] = '\0';
 
     printf("DO-WHILE -> %s\n", JC_resultado);
-    return 0;
 }
 
-FOR -> PrOgRaMaR Es DiVeRtIdO
-WHILE -> PrOgRaMaR Es DiVeRtIdO
-DO-WHILE -> PrOgRaMaR Es DiVeRtIdO
+void leaConvertirMayMin() {
+    int sizeTexto=100;
+    char texto[sizeTexto];
+    char nrovocales;
+    leaValidarLetras("Ingrese un texto : ", texto, sizeof(texto));
+    printf("El texto ingresado es: %s\n", texto);
+    leaConvertirMayMinFor(texto);
+    leaConvertirMayMinWhile(texto);
+    leaConvertirMayMinDoWhile(texto);
+}
+
+void ControladorCadenaCaracteres()
+{
+    leaContadorVocales();
+    leaContarConsonates();
+    leaEliminarVocal();
+    leaEliminarConsonate();
+    leaInvertirVocal();
+    leaInvertirCon();
+    leaEliminarLetra();
+    leaAnagramaFor();
+    leaAnagramaWhile();
+    leaAnagramaDoWhile();
+    leaConvertirMayMin();
+
+}
