@@ -1,14 +1,33 @@
 #include <stdio.h>
 #include "../lib/tool.h"
 
-long leaRecursionFactorial(int leaNumero)
+int leaRecursionSuma(int leaNum,int leaNum1)
 {
-    if (leaNumero == 0 || leaNumero == 1)
+    if(leaNum1==0)
+    {
+        return leaNum;
+    }
+    int leaSuma = leaNum ^ leaNum1;
+    int leaCarry = (leaNum & leaNum1) << 1;
+    return leaRecursionSuma(leaSuma,leaCarry);
+}
+
+int leaRecursionProducto(int leaNum, int leaNum1)
+{
+    if (leaNum1 == 0)
+    {
+        return 0;
+    }
+    return leaRecursionSuma(leaNum,leaRecursionProducto(leaNum,leaRecursionSuma(leaNum1,~0)));
+}
+
+int leaRecursionFactorial(int leaNum)
+{
+    if(leaNum==0)
     {
         return 1;
-    }else{
-        return leaNumero*leaRecursionFactorial(leaNumero-1);
     }
+    return leaRecursionProducto(leaNum,leaRecursionFactorial(leaRecursionSuma(leaNum,~0)));
 }
 
 void leaMostrarFactorial()
@@ -20,16 +39,7 @@ void leaMostrarFactorial()
     printf("El factorial de %d es %ld\n",leaNumero,leaFactorial);
 }
 
-int leaRecursionSuma(int leaNumero, int leaNumero1)
-{
-    if (leaNumero1 == 0) {
-        return leaNumero;
-    } else if (leaNumero1 > 0) {
-        return leaRecursionSuma(leaNumero + 1, leaNumero1 - 1);
-    } else {
-        return leaRecursionSuma(leaNumero - 1, leaNumero1 + 1);
-    }
-}
+
 
 void leaMostrarSuma()
 {
@@ -41,19 +51,7 @@ void leaMostrarSuma()
     printf("\nLa suma de %d y %d es %d\n",leaNumero,leaNumero1,leaSuma);
 }
 
-int leaRecursionProducto(int leaNumero, int leaNumero1)
-{
-    if (leaNumero1 == 0)
-    {
-        return 0;
-    }else if(leaNumero1 > 0)
-    {
-        return leaNumero + leaRecursionProducto(leaNumero,leaNumero1 - 1);
-    }else
-    {
-        return -leaRecursionProducto(leaNumero, -leaNumero1);
-    }
-}
+
 
 void leaMostrarProducto()
 {
@@ -70,9 +68,8 @@ int leaRecursionPotencia(int leaBase, int leaExpo)
     if(leaExpo == 0)
     {
         return 1;
-    }else{
-        return leaBase * leaRecursionPotencia(leaBase, leaExpo - 1);
     }
+        return leaRecursionProducto(leaBase, leaRecursionPotencia(leaBase,leaRecursionSuma(leaExpo,~0)));
 }
 
 void leaMostrarPotencia()
@@ -85,14 +82,14 @@ void leaMostrarPotencia()
     printf("\nEl %d elevado a la potencia de %d es %d\n",leaNumero,leaNumero1,leaPotencia);
 }
 
-void leaConteoProgresivo(int leaNumero){
-    if(leaNumero < 1)
+void leaConteoProgresivo(int leaNum){
+    if(leaNum < 0)
     {
         return;
     }
     
-    leaConteoProgresivo(leaNumero-1);
-    printf("Cuenta progresiva: %d\n", leaNumero);
+    leaConteoProgresivo(leaRecursionSuma(leaNum,~0));
+    printf("Cuenta progresiva: %d\n", leaNum);
 }
 
 void leaMostrarConteoPro()
@@ -103,13 +100,13 @@ void leaMostrarConteoPro()
 
 }
 
-void leaConteoRegresivo(int leaNumero){
-    if(leaNumero < 0)
+void leaConteoRegresivo(int leaNum){
+    if(leaNum < 0)
     {
         return;
     }
-    printf("Cuenta progresiva: %d\n", leaNumero);
-    leaConteoRegresivo(leaNumero-1);
+    printf("Cuenta progresiva: %d\n", leaNum);
+    leaConteoRegresivo(leaRecursionSuma(leaNum,~0));
 }
 
 void leaMostrarConteoReg()
