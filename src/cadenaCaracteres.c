@@ -271,7 +271,7 @@ void leaEliminarConsonate()
     char leatexto[leasizeTexto];
     char leanroCon;
     leaValidarLetras("Ingrese un texto: ", leatexto, sizeof(leatexto));
-    leanroCon = leaLeerVocal("Ingrese la consonate: ");
+    leanroCon = leaLeerVocal("Ingrese la consonante: ");
     JCeliminarLetra_for(leatexto,leanroCon);
     JCeliminarLetra_dowhile(leatexto,leanroCon);
     JCeliminarLetra_while(leatexto,leanroCon);
@@ -279,7 +279,7 @@ void leaEliminarConsonate()
 
 void JCinvertirConVocalesMayus_for(char JCpalabra[]) {
     int JClongitud = strlen(JCpalabra);
-    printf("Invertida con vocales mayúsculas (for): ");
+    printf("Invertida con vocales mayusculas (for): ");
     for (int JCi = JClongitud - 1; JCi >= 0; JCi--) {
         char JCletra = JCpalabra[JCi];
         char JCletraMin = tolower(JCletra);
@@ -294,7 +294,7 @@ void JCinvertirConVocalesMayus_for(char JCpalabra[]) {
 
 void JCinvertirConVocalesMayus_dowhile(char JCpalabra[]) {
     int JCi = strlen(JCpalabra) - 1;
-    printf("Invertida con vocales mayúsculas (do-while): ");
+    printf("Invertida con vocales mayusculas (do-while): ");
 
     if (JCi < 0) return;
 
@@ -314,7 +314,7 @@ void JCinvertirConVocalesMayus_dowhile(char JCpalabra[]) {
 
 void JCinvertirConVocalesMayus_while(char JCpalabra[]) {
     int JCi = strlen(JCpalabra) - 1;
-    printf("Invertida con vocales mayúsculas (while): ");
+    printf("Invertida con vocales mayusculas (while): ");
     while (JCi >= 0) {
         char JCletra = JCpalabra[JCi];
         char JCletraMin = tolower(JCletra);
@@ -662,6 +662,7 @@ void leaConvertirMayMin() {
 
 void ControladorCadenaCaracteres()
 {
+    printf("Cadena de Caracteres:\n");
     leaContadorVocales();
     leaContarConsonates();
     leaEliminarVocal();
