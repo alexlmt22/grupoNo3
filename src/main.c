@@ -7,6 +7,8 @@
 #include "array.c"
 #include "recursion.c"
 #include "figuras.c"
+#include "serieNumericaCaracter.c"
+#include "recursion.c"
 
 int main()
 {
@@ -77,6 +79,7 @@ int main()
    cargaFigurasForIM();
    cargaFigurasWhileIM();
    cargaFigurasDoWhileIM();
+   
 
     leaControladorRecursion();
     return 0;
