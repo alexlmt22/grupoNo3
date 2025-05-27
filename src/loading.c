@@ -323,8 +323,7 @@ void cargaDobleFlechaForIM()
     printf("Craga Doble Flecha for:\n");
     for (porcentajeIM = 0; porcentajeIM <= 100; porcentajeIM ++)
     {
-        posIM = porcentajeIM / 5;
-        if (posIM > 17) posIM = 17;
+        posIM = porcentajeIM * 17 / 100;
         for (int i = 0; i < 20; i++)
             barraIM[i] = ' ';
         for (int j = 0; j < 3; j++)
@@ -344,8 +343,7 @@ void cargaDobleFlechawhileIM()
     printf("Crga Doble Flecha while:\n");
     while (porcentajeIM <= 100)
     {
-        posIM = porcentajeIM / 5;
-        if (posIM > 17) posIM = 17;
+        posIM = porcentajeIM * 17 / 100;
         for (int i = 0; i < 20; i++)
             barraIM[i] = ' ';
         for (int j = 0; j < 3; j++)
@@ -356,7 +354,6 @@ void cargaDobleFlechawhileIM()
         Sleep(80);
         porcentajeIM ++;
     }
-
     printf("\nCarga completa\n");
 }
 void cargaDobleFlechaDoWhileIM()
@@ -367,8 +364,7 @@ void cargaDobleFlechaDoWhileIM()
     printf("Craga Doble Flecha dowhile:\n");
     do
     {
-        posIM = porcentajeIM / 5;
-        if (posIM > 17) posIM = 17;
+        posIM = porcentajeIM * 17 / 100;
         for (int i = 0; i < 20; i++)
             barraIM[i] = ' ';
         for (int j = 0; j < 3; j++)
@@ -474,7 +470,7 @@ void cargaNombreForIM()
         fflush(stdout);
         Sleep(400);
     }
-    printf("\nCarga completa: %s\n", nombreIM);
+    printf("\nCarga completa\n:" );
 }
 void cargaNombreWhileIM()
 {
@@ -496,7 +492,7 @@ void cargaNombreWhileIM()
         Sleep(300);
         iIM++;
     }
-    printf("\nCarga completa: %s\n", nombreIM);
+    printf("\nCarga completa\n:");
 }
 void cargaNombreDoWhileIM()
 {
@@ -521,7 +517,7 @@ void cargaNombreDoWhileIM()
             iIM++;
         } while (iIM <= lonIM);
     }
-    printf("\nCarga completa: %s\n", nombreIM);
+    printf("\nCarga completa\n:");
 }
 void cargaNombreSecuenciaForIM()
 {
@@ -540,7 +536,7 @@ void cargaNombreSecuenciaForIM()
         fflush(stdout);
         Sleep(300);
     }
-    printf("\nProceso terminado: %s\n", nombreIM);
+    printf("\nCarga completa\n:");
 }
 void cargaNombreSecuencialWhileIM()
 {
@@ -560,7 +556,7 @@ void cargaNombreSecuencialWhileIM()
         Sleep(300);
         iIM++;
     }
-    printf("\nProceso terminado: %s\n", nombreIM);
+    printf("\nCarga completa\n:");
 }
 void cargaNombreSecuencialdowhileIM()
 {
@@ -583,7 +579,7 @@ void cargaNombreSecuencialdowhileIM()
             iIM++;
         } while (iIM < lonIM);
     }
-    printf("\nProceso terminado: %s\n", nombreIM);
+    printf("\nCraga completa\n");
 }
 void cargaescaleraSpinnerForIM()
 {
@@ -682,76 +678,94 @@ void cargaescaleraWaitingDoWhileIM()
 }
 void cargaFigurasForIM()
 {
-    const char* figurasIM[3] = {"\\|||/", "(> <)", "ooO-(_)-Ooo"};
-    int maxDesplIM = 30, pasoIM, idxIM;
+    const char* figurasIM[3] = {
+        " \\|||/",
+        " (> <)",
+        "ooO-(_)-Ooo"
+    };
+    int maxDesplIM = 30;
     printf("Cargando Figura for:\n");
-    for (pasoIM = 0; pasoIM <= maxDesplIM; pasoIM++)
+    for (int pasoIM = 0; pasoIM <= maxDesplIM; pasoIM++)
     {
-        for (int iIM = 0; iIM < pasoIM; iIM++) printf(" ");
-        idxIM = pasoIM % 3;
-        printf("\r%s", figurasIM[idxIM]);
-        fflush(stdout);
-        Sleep(200);
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < pasoIM; j++) printf(" ");
+            printf("%s\n", figurasIM[i]);
+        }
+        Sleep(80);
     }
-    for (pasoIM = maxDesplIM; pasoIM >= 0; pasoIM--)
+    for (int pasoIM = maxDesplIM; pasoIM >= 0; pasoIM--)
     {
-        for (int iIM = 0; iIM < pasoIM; iIM++) printf(" ");
-        idxIM = pasoIM % 3;
-        printf("\r%s", figurasIM[idxIM]);
-        fflush(stdout);
-        Sleep(200);
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < pasoIM; j++) printf(" ");
+            printf("%s\n", figurasIM[i]);
+        }
+        Sleep(80);
     }
-    printf("\n");
+    printf("Carga completada\n");
 }
 void cargaFigurasWhileIM()
 {
-    const char* figurasIM[3] = {"\\|||/", "(> <)", "ooO-(_)-Ooo"};
-    int maxDesplIM = 30, pasoIM = 0, idxIM;
+    const char* figurasIM[3] = {
+        " \\|||/",
+        " (> <)",
+        "ooO-(_)-Ooo"
+    };
+    int maxDesplIM = 30;
+    int pasoIM = 0;
     printf("Cargando Figura while:\n");
     while (pasoIM <= maxDesplIM)
     {
-        for (int iIM = 0; iIM < pasoIM; iIM++) printf(" ");
-        idxIM = pasoIM % 3;
-        printf("\r%s", figurasIM[idxIM]);
-        fflush(stdout);
-        Sleep(200);
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < pasoIM; j++) printf(" ");
+            printf("%s\n", figurasIM[i]);
+        }
+        Sleep(80);
         pasoIM++;
     }
     while (pasoIM >= 0)
     {
-        for (int iIM = 0; iIM < pasoIM; iIM++) printf(" ");
-        idxIM = pasoIM % 3;
-        printf("\r%s", figurasIM[idxIM]);
-        fflush(stdout);
-        Sleep(200);
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < pasoIM; j++) printf(" ");
+            printf("%s\n", figurasIM[i]);
+        }
+        Sleep(80);
         pasoIM--;
     }
-    printf("\n");
+    printf("Carga completada\n");
 }
 void cargaFigurasDoWhileIM()
 {
-    const char* figurasIM[3] = {"\\|||/", "(> <)", "ooO-(_)-Ooo"};
-    int maxDesplIM = 30, pasoIM = 0, idxIM;
-    printf("Cragando Figura dowhile:\n");
-    do
+    const char* figurasIM[3] = 
     {
-        for (int iIM = 0; iIM < pasoIM; iIM++) printf(" ");
-        idxIM = pasoIM % 3;
-        printf("\r%s", figurasIM[idxIM]);
-        fflush(stdout);
-        Sleep(200);
+        " \\|||/",
+        " (> <)",
+        "ooO-(_)-Ooo"
+    };
+    int pasoIM = 0;
+    int maxDesplIM = 30;
+    printf("Cargando Figura dowhile:\n");
+    do {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < pasoIM; j++) printf(" ");
+            printf("%s\n", figurasIM[i]);
+        }
+        Sleep(80);
         pasoIM++;
     } while (pasoIM <= maxDesplIM);
-    do
-    {
-        for (int iIM = 0; iIM < pasoIM; iIM++) printf(" ");
-        idxIM = pasoIM % 3;
-        printf("\r%s", figurasIM[idxIM]);
-        fflush(stdout);
-        Sleep(200);
+    do {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < pasoIM; j++) printf(" ");
+            printf("%s\n", figurasIM[i]);
+        }
+        Sleep(80);
         pasoIM--;
     } while (pasoIM >= 0);
-    printf("\n");
+    printf("\nCarga ompletada\n");
 }
+
 
     
