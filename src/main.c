@@ -10,6 +10,7 @@
 
 int main()
 {
+    void f1 (niveles);
     leaVerPortada();
     leaControladorSerie();
     llControladorArray();
