@@ -42,7 +42,7 @@ int main()
         default: printf("Figura no válida.\n");
     }
 
-    return 0;
+
 
     leaVerPortada();
     leaControladorSerie();
