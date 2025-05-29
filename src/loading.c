@@ -320,7 +320,7 @@ void cargaDobleFlechaForIM()
     char barraIM[21];          
     const char* simboloIM = "<=>";
     int porcentajeIM, posIM;
-    printf("Craga Doble Flecha for:\n");
+    printf("Carga Doble Flecha for:\n");
     for (porcentajeIM = 0; porcentajeIM <= 100; porcentajeIM ++)
     {
         posIM = porcentajeIM * 17 / 100;
@@ -340,7 +340,7 @@ void cargaDobleFlechawhileIM()
     char barraIM[21];
     const char* simboloIM = "<=>";
     int porcentajeIM = 0, posIM;
-    printf("Crga Doble Flecha while:\n");
+    printf("Carga Doble Flecha while:\n");
     while (porcentajeIM <= 100)
     {
         posIM = porcentajeIM * 17 / 100;
@@ -361,7 +361,7 @@ void cargaDobleFlechaDoWhileIM()
     char barraIM[21];
     const char* simboloIM = "<=>";
     int porcentajeIM = 0, posIM;
-    printf("Craga Doble Flecha dowhile:\n");
+    printf("Carga Doble Flecha dowhile:\n");
     do
     {
         posIM = porcentajeIM * 17 / 100;
@@ -401,7 +401,6 @@ void cargaFlechaSpinnerForIM()
     }
     printf("\nCarga completa\n");
 }
-
 void cargaFlechaSpinnerWhileIM()
 {
     char barraIM[21];
@@ -471,6 +470,7 @@ void cargaNombreForIM()
         Sleep(400);
     }
     printf("\nCarga completa\n:" );
+
 }
 void cargaNombreWhileIM()
 {
