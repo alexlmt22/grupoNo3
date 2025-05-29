@@ -9,6 +9,7 @@
 #include "figuras.c"
 #include "serieNumericaCaracter.c"
 #include "recursion.c"
+#include "loading.c"
 
 int main()
 {
@@ -43,42 +44,7 @@ int main()
     ControladorCadenaCaracteres();
     leaControladorFiguras();
     
-    cargaRotativaForIM();
-    cargaRotativawhileIM();
-    cargaRotativadowhileIM();
-    cargaBarraForIM();
-    cargaBarraWhileIM();
-    cargaBarraDoWhileIM();
-    cargaMovimientoForIM();
-    cargaMovimientoWhileIM();
-    cargaMovimientoDoWhileIM();
-   cargaWaitingForIM();
-   cargaWaitingWhileIM();
-   cargaWaitingDoWhileIM();
-   cargaFlechaForIM();
-   cargaFlechaWhileIM();
-   cargaFlechadowhileIM();
-   cargaDobleFlechaForIM();
-   cargaDobleFlechawhileIM();
-   cargaDobleFlechaDoWhileIM();
-   cargaFlechaSpinnerForIM();
-   cargaFlechaSpinnerWhileIM();
-   cargaFlechaSpinnerDoWhileIM();
-   cargaNombreForIM();
-   cargaNombreWhileIM();
-   cargaNombreDoWhileIM();
-   cargaNombreSecuenciaForIM();
-   cargaNombreSecuencialWhileIM();
-   cargaNombreSecuencialdowhileIM();
-   cargaescaleraSpinnerForIM();
-   cargaescaleraSpinnerWhileIM();
-   cargaescaleraSpinnerDoWhileIM();
-   cargaescaleraWaitingForIM();
-   cargaescaleraWaitingWhileIM();
-   cargaescaleraWaitingDoWhileIM();
-   cargaFigurasForIM();
-   cargaFigurasWhileIM();
-   cargaFigurasDoWhileIM();
+
    
 
     leaControladorRecursion();
