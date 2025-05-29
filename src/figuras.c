@@ -1,8 +1,8 @@
-//Autor Juan Diego Jurado
-//taller grupal Figuras 
 #include <stdio.h>
 
-void F1(int n) {
+void jjF1(int n) 
+{
+    printf("\nFigura 1:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
             if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
@@ -12,9 +12,13 @@ void F1(int n) {
         }
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F2(int n) {
+void jjF2(int n) 
+{
+    printf("\nFigura 2:\n");
     char simbolos[2] = {'+', '*'};
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
@@ -25,18 +29,26 @@ void F2(int n) {
         }
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F3(int n) {
+void jjF3(int n)
+{
+    printf("\nFigura 3:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j <= i; ++j) {
             printf("* ");
         }
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F4(int n) {
+void jjF4(int n)
+{
+    printf("\nFigura 4:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n - i - 1; ++j)
             printf("  ");
@@ -44,9 +56,13 @@ void F4(int n) {
             printf("* ");
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F5(int n) {
+void jjF5(int n)
+{
+    printf("\nFigura 5:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < i; ++j)
             printf(" ");
@@ -54,9 +70,13 @@ void F5(int n) {
             printf("*");
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F6(int n) {
+void jjF6(int n) 
+{
+    printf("\nFigura 6:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n - i - 1; ++j)
             printf(" ");
@@ -64,27 +84,39 @@ void F6(int n) {
             printf("*");
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F7(int n) {
+void jjF7(int n) 
+{
+    printf("\nFigura 7:\n");
     printf("_\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < i * 3; ++j)
             printf(" ");
         printf("|___\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F8(int n) {
+void jjF8(int n) 
+{
+    printf("\nFigura 8:\n");
     printf("    _\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < (n - 1 - i) * 3; ++j)
             printf(" ");
         printf("___|\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F9(int n) {
+void jjF9(int n) 
+{
+    printf("\nFigura 9:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n - i - 1; ++j)
             printf("   ");
@@ -95,9 +127,13 @@ void F9(int n) {
             printf("|__");
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F10(int n) {
+void jjF10(int n) 
+{
+    printf("\nFigura 10:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < i * 3; ++j)
             printf(" ");
@@ -109,9 +145,14 @@ void F10(int n) {
     for (int j = 0; j < n * 3; ++j)
         printf(" ");
     printf("|\n");
+
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F11(int n) {
+void jjF11(int n) 
+{
+    printf("\nFigura 11:\n");
     for (int i = 1; i <= n; ++i) {
         for (int s = 0; s < (i - 1) * 4; ++s)
             printf(" ");
@@ -120,25 +161,37 @@ void F11(int n) {
             printf(" _");
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F12(int n) {
+void jjF12(int n) 
+{
+    printf("\nFigura 12:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 1; j <= n - i; ++j)
             printf("%d", j);
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F13(int n) {
+void jjF13(int n) 
+{
+    printf("\nFigura 13:\n");
     for (int i = 1; i <= n; ++i) {
         for (int j = 1; j <= i; ++j)
             printf("%d", j);
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F14(int n) {
+void jjF14(int n)
+{
+    printf("\nFigura 14:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n - i - 1; ++j)
             printf(" ");
@@ -149,9 +202,13 @@ void F14(int n) {
         }
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F15(int n) {
+void jjF15(int n)
+{
+    printf("\nFigura 15:\n");
     for (int i = 0; i < n; i++) {
         int numero = 1;
         for (int j = 0; j <= i; j++) {
@@ -160,9 +217,13 @@ void F15(int n) {
         }
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F16(int n) {
+void jjF16(int n)
+{
+    printf("\nFigura 16:\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             if ((i == 0 && (j == 0 || j == n - 1)) || (i == 2 && j == n / 2) || (i == 4 && (j == 0 || j == n - 1)))
@@ -174,9 +235,13 @@ void F16(int n) {
         }
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F17(int n) {
+void jjF17(int n)
+{
+    printf("\nFigura 17:\n");
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             if ((i == 0 && (j == 0 || j == n - 1)) || (i == 2 && j == n / 2) || (i == 4 && (j == 0 || j == n - 1)))
@@ -188,9 +253,13 @@ void F17(int n) {
         }
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F18(int n) {
+void jjF18(int n)
+{
+    printf("\nFigura 18:\n");
     for (int i = 0; i < n; i++) {
         int num = 1;
         printf("%d ", num);
@@ -204,9 +273,13 @@ void F18(int n) {
             printf("2");
         printf("\n");
     }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void F19(int n) {
+void jjF19(int n)
+{
+    printf("\nFigura 19:\n");
     int valor = 3;
     for (int i = 0; i < n; i++) {
         if (i == 0) {
@@ -220,68 +293,34 @@ void F19(int n) {
             printf("*\n");
         }
     }
-}
-void F20(int n) {
-    int i, j;
-    for (i = 0; i < n; ++i) {
-        for (j = 0; j < i * 4; ++j)
-            printf(" ");
-        printf("|___     / 100%%\n");
-    }
-}
-void F21(int n) {
-    int i, j;
-
-    // Parte de la escalera (desde abajo hacia arriba)
-    for (i = n - 1; i >= 0; --i) {
-        for (j = 0; j < i * 5; ++j)
-            printf(" ");
-        printf("___|\n");
-    }
-
-    // Base de la escalera
-    for (j = 0; j < n * 5; ++j)
-        printf(" ");
-    printf("|\n");
-
-    // Parte de carga: o0o 100%
-    for (i = 0; i < n; ++i) {
-        for (j = 0; j < i * 5; ++j)
-            printf(" ");
-        printf("o0o 100%%\n");
-    }
+    printf("\n");
+    printf("---------------------------------");
 }
 
-void leaControladorFiguras() {
-    int figura, niveles;
-    printf("Selecciona la figura (1-21 ");
-    scanf("%d", &figura);
-    printf("Introduce el tamaño / niveles: ");
+void llControladorFiguras()
+{
+    int niveles;
+    printf("\nFiguras:\n");
+    printf("Introduce el tamano / niveles: ");
     scanf("%d", &niveles);
-
-    switch (figura) {
-        case 1: F1(niveles); break;
-        case 2: F2(niveles); break;
-        case 3: F3(niveles); break;
-        case 4: F4(niveles); break;
-        case 5: F5(niveles); break;
-        case 6: F6(niveles); break;
-        case 7: F7(niveles); break;
-        case 8: F8(niveles); break;
-        case 9: F9(niveles); break;
-        case 10: F10(niveles); break;
-        case 11: F11(niveles); break;
-        case 12: F12(niveles); break;
-        case 13: F13(niveles); break;
-        case 14: F14(niveles); break;
-        case 15: F15(niveles); break;
-        case 16: F16(niveles); break;
-        case 17: F17(niveles); break;
-        case 18: F18(niveles); break;
-        case 19: F19(niveles); break;
-        case 20: F20(niveles); break;
-        case 21: F21(niveles); break;
-        default: printf("Figura no válida.\n");
-    }
-
+    jjF1(niveles); 
+    jjF2(niveles); 
+    jjF3(niveles);
+    jjF4(niveles); 
+    jjF5(niveles); 
+    jjF6(niveles); 
+    jjF7(niveles); 
+    jjF8(niveles); 
+    jjF9(niveles); 
+    jjF10(niveles); 
+    jjF11(niveles); 
+    jjF12(niveles); 
+    jjF13(niveles); 
+    jjF14(niveles); 
+    jjF15(niveles); 
+    jjF16(niveles); 
+    jjF17(niveles); 
+    jjF18(niveles); 
+    jjF19(niveles); 
+    printf("\n");
 }
