@@ -14,7 +14,7 @@ void cargaRotativaForIM()
         fflush(stdout);
         Sleep(50);
     }
-    printf("\nCarga completa\n");
+    printf("\ncarga completa\n");
 }
 void cargaRotativawhileIM() 
 {
@@ -46,7 +46,7 @@ void cargaRotativadowhileIM()
                 porcentajeIM++;
     }
      while (porcentajeIM <= 100);
-    printf("\nCarga completa\n");
+    printf("\ncarga completa\n");
 }
 void cargaBarraForIM()
  {
@@ -105,7 +105,7 @@ void cargaBarraDoWhileIM()
     char rellenoIM;
     int porcentajeIM = 0;
     int numcharsIM;
-    printf("Barra de carga dowhile:");
+    printf("barra de carga dowhile:");
     scanf(" %c",   &rellenoIM);
     do
     {
@@ -124,7 +124,7 @@ void cargaBarraDoWhileIM()
         Sleep(70);
         porcentajeIM++;
     } while (porcentajeIM <= 100);
-    printf("\nCarga completa\n");   
+    printf("\ncargacompleta\n");   
 }
 void cargaMovimientoForIM()
 {
@@ -244,7 +244,7 @@ void cargaWaitingDoWhileIM()
         porcentajeIM++;
     }
     while (porcentajeIM <= 100);
-    printf("\nCarga completa\n");
+    printf("\n");
 }
 void cargaFlechaForIM()
 {
@@ -401,14 +401,13 @@ void cargaFlechaSpinnerForIM()
     }
     printf("\nCarga completa\n");
 }
-
 void cargaFlechaSpinnerWhileIM()
 {
     char barraIM[21];
     char spinnerIM[] = {'\\','|','/','-'};
     int porcentajeIM = 0, numIM, idxIM;
 
-    printf("Carga Flecha Spinner while:\n");
+    printf("Craga Flecha Spinner while:\n");
     while (porcentajeIM <= 100)
     {
         numIM = porcentajeIM * 20 / 100;
@@ -470,11 +469,8 @@ void cargaNombreForIM()
         fflush(stdout);
         Sleep(400);
     }
-<<<<<<< HEAD
-    printf("\nProceso terminado: %s\n", nombreIM);
-=======
     printf("\nCarga completa\n:" );
->>>>>>> dev-inti
+
 }
 void cargaNombreWhileIM()
 {
@@ -496,11 +492,7 @@ void cargaNombreWhileIM()
         Sleep(300);
         iIM++;
     }
-<<<<<<< HEAD
-    printf("\nProceso terminado: %s\n", nombreIM);
-=======
     printf("\nCarga completa\n:");
->>>>>>> dev-inti
 }
 void cargaNombreDoWhileIM()
 {
@@ -525,11 +517,7 @@ void cargaNombreDoWhileIM()
             iIM++;
         } while (iIM <= lonIM);
     }
-<<<<<<< HEAD
-    printf("\nProceso terminado: %s\n", nombreIM);
-=======
     printf("\nCarga completa\n:");
->>>>>>> dev-inti
 }
 void cargaNombreSecuenciaForIM()
 {
@@ -558,7 +546,7 @@ void cargaNombreSecuencialWhileIM()
     fgets(nombreIM, sizeof(nombreIM), stdin);
     nombreIM[strcspn(nombreIM, "\n")] = '\0';
     lonIM = strlen(nombreIM);
-    printf("Cargando Nombre while:\n");
+    printf("Cragando Nombre while:\n");
     while (iIM < lonIM)
     {
         char letraIM = nombreIM[iIM];
@@ -751,14 +739,7 @@ void cargaFigurasWhileIM()
 }
 void cargaFigurasDoWhileIM()
 {
-<<<<<<< HEAD
-    const char* figurasIM[3] = {"\\|||/", "(> <)", "ooO-(_)-Ooo"};
-    int maxDesplIM = 30, pasoIM = 0, idxIM;
-    printf("Cargando Figura dowhile:\n");
-    do
-=======
     const char* figurasIM[3] = 
->>>>>>> dev-inti
     {
         " \\|||/",
         " (> <)",
