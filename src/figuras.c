@@ -252,7 +252,7 @@ void F21(int n) {
     }
 }
 
-int leaControladorFiguras() {
+void leaControladorFiguras() {
     int figura, niveles;
     printf("Selecciona la figura (1-21 ");
     scanf("%d", &figura);
@@ -284,5 +284,4 @@ int leaControladorFiguras() {
         default: printf("Figura no válida.\n");
     }
 
-    return 0;
 }
